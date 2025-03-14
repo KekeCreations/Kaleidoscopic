@@ -1,7 +1,7 @@
-package com.kekecreations.kaleidoscopic.platform;
+package com.kekecreations.kaleidoscopic.core.platform;
 
 import com.kekecreations.kaleidoscopic.Kaleidoscopic;
-import com.kekecreations.kaleidoscopic.platform.services.IPlatformHelper;
+import com.kekecreations.kaleidoscopic.core.platform.services.IPlatformHelper;
 
 import java.util.ServiceLoader;
 

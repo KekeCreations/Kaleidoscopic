@@ -1,6 +1,6 @@
 package com.kekecreations.kaleidoscopic.platform;
 
-import com.kekecreations.kaleidoscopic.platform.services.IPlatformHelper;
+import com.kekecreations.kaleidoscopic.core.platform.services.IPlatformHelper;
 import net.neoforged.fml.ModList;
 import net.neoforged.fml.loading.FMLLoader;
 

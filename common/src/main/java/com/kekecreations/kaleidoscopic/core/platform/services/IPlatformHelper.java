@@ -1,4 +1,4 @@
-package com.kekecreations.kaleidoscopic.platform.services;
+package com.kekecreations.kaleidoscopic.core.platform.services;
 
 public interface IPlatformHelper {
 
