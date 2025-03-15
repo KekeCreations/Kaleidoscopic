@@ -34,5 +34,16 @@ loom {
             ideConfigGenerated(true)
             runDir('runs/server')
         }
+        datagen {
+            inherit client
+            name "Data Generation"
+            vmArg "-Dfabric-api.datagen"
+            vmArg "-Dfabric-api.datagen.output-dir=${file("../common/src/main/generated/")}"
+            vmArg "-Dfabric-api.datagen.modid=kaleidoscopic"
+
+            runDir "build/datagen"
+        }
     }
 }
+
+sourceSets.main.resources { srcDir project(":common").file('src/main/generated/').getAbsolutePath() }
