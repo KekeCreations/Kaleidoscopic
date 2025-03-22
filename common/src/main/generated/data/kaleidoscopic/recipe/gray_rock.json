@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "K": {
+      "tag": "kaleidoscopic:can_craft_rock"
+    },
+    "X": {
+      "item": "minecraft:gray_dye"
+    }
+  },
+  "pattern": [
+    "XK",
+    "KX"
+  ],
+  "result": {
+    "count": 2,
+    "id": "kaleidoscopic:gray_rock"
+  }
+}

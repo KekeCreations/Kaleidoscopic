@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "K": {
+      "tag": "kaleidoscopic:can_craft_rock"
+    },
+    "X": {
+      "item": "minecraft:cyan_dye"
+    }
+  },
+  "pattern": [
+    "XK",
+    "KX"
+  ],
+  "result": {
+    "count": 2,
+    "id": "kaleidoscopic:cyan_rock"
+  }
+}
