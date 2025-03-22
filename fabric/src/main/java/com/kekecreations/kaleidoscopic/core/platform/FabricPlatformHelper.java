@@ -1,4 +1,4 @@
-package com.kekecreations.kaleidoscopic.platform;
+package com.kekecreations.kaleidoscopic.core.platform;
 
 import com.kekecreations.kaleidoscopic.core.platform.services.IPlatformHelper;
 import net.fabricmc.loader.api.FabricLoader;
