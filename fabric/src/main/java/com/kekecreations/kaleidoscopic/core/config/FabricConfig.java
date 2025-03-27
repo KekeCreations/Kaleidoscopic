@@ -110,4 +110,11 @@ public class FabricConfig implements CustomPacketPayload {
     public boolean isDyedRockEnabled() {
         return isDyedRockEnabled;
     }
+
+    @Comment("Enables Dyed Rock block variants")
+    private boolean isDyedRockVariantsEnabled = true;
+
+    public boolean isDyedRockVariantsEnabled() {
+        return isDyedRockVariantsEnabled;
+    }
 }

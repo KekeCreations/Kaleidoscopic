@@ -18,6 +18,8 @@ public class KModelProvider extends FabricModelProvider {
         for (DyeColor colour : DyeColor.values()) {
             BlockModelGenerators.BlockFamilyProvider rockBlock = generator.family(KBlocks.DYED_ROCKS.get(colour).get());
             rockBlock.stairs(KBlocks.DYED_ROCK_STAIRS.get(colour).get());
+            rockBlock.slab(KBlocks.DYED_ROCK_SLABS.get(colour).get());
+            rockBlock.wall(KBlocks.DYED_ROCK_WALLS.get(colour).get());
         }
     }
 

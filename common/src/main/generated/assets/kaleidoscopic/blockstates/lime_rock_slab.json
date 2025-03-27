@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "kaleidoscopic:block/lime_rock_slab"
+    },
+    "type=double": {
+      "model": "kaleidoscopic:block/lime_rock"
+    },
+    "type=top": {
+      "model": "kaleidoscopic:block/lime_rock_slab_top"
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "green_rock": {
+      "conditions": {
+        "items": [
+          {
+            "items": "kaleidoscopic:green_rock"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "kaleidoscopic:green_rock_stairs"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "green_rock"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "kaleidoscopic:green_rock_stairs"
+    ]
+  }
+}

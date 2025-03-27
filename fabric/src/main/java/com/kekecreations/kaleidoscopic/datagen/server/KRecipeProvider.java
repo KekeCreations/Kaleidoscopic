@@ -25,7 +25,15 @@ public class KRecipeProvider  extends FabricRecipeProvider {
     @Override
     public void buildRecipes(RecipeOutput recipeOutput) {
         for (DyeColor dyeColour : DyeColor.values()) {
+            //Dyed Rocks
             dyeSquareRecipe(Ingredient.of(KTags.ItemTags.CAN_CRAFT_ROCK), dyeColour, KBlocks.DYED_ROCKS.get(dyeColour).get(), recipeOutput);
+            dyeSquareRecipe(Ingredient.of(KTags.ItemTags.CAN_CRAFT_ROCK_STAIRS), dyeColour, KBlocks.DYED_ROCK_STAIRS.get(dyeColour).get(), recipeOutput);
+            dyeSquareRecipe(Ingredient.of(KTags.ItemTags.CAN_CRAFT_ROCK_SLAB), dyeColour, KBlocks.DYED_ROCK_SLABS.get(dyeColour).get(), recipeOutput);
+            dyeSquareRecipe(Ingredient.of(KTags.ItemTags.CAN_CRAFT_ROCK_WALL), dyeColour, KBlocks.DYED_ROCK_WALLS.get(dyeColour).get(), recipeOutput);
+            stairRecipe(KBlocks.DYED_ROCKS.get(dyeColour).get(), KBlocks.DYED_ROCK_STAIRS.get(dyeColour).get(), recipeOutput);
+            slabRecipe(KBlocks.DYED_ROCKS.get(dyeColour).get(), KBlocks.DYED_ROCK_SLABS.get(dyeColour).get(), recipeOutput);
+            wallRecipe(KBlocks.DYED_ROCKS.get(dyeColour).get(), KBlocks.DYED_ROCK_WALLS.get(dyeColour).get(), recipeOutput);
+
         }
 
     }
@@ -37,7 +45,34 @@ public class KRecipeProvider  extends FabricRecipeProvider {
                 .define('K', craftingBlock)
                 .define('X', DyeItem.byColor(dyeColour))
                 .unlockedBy(getItemName(resultBlock), has(DyeItem.byColor(dyeColour)))
-                .save(output);
+                .save(output, getItemName(resultBlock) + "_type");
+    }
+
+    protected static void stairRecipe(Block craftingBlock, Block resultBlock, RecipeOutput recipeConsumer) {
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, resultBlock ,4)
+                .pattern("K  ")
+                .pattern("KK ")
+                .pattern("KKK")
+                .define('K', craftingBlock)
+                .unlockedBy(getItemName(craftingBlock), has(craftingBlock))
+                .save(recipeConsumer);
+    }
+
+    protected static void slabRecipe(Block craftingBlock, Block resultBlock, RecipeOutput recipeConsumer) {
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, resultBlock ,6)
+                .pattern("KKK")
+                .define('K', craftingBlock)
+                .unlockedBy(getItemName(craftingBlock), has(craftingBlock))
+                .save(recipeConsumer);
+    }
+
+    protected static void wallRecipe(Block craftingBlock, Block resultBlock, RecipeOutput recipeConsumer) {
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, resultBlock ,6)
+                .pattern("KKK")
+                .pattern("KKK")
+                .define('K', craftingBlock)
+                .unlockedBy(getItemName(craftingBlock), has(craftingBlock))
+                .save(recipeConsumer);
     }
 }
 

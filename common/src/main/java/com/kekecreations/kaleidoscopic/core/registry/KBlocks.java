@@ -3,7 +3,9 @@ package com.kekecreations.kaleidoscopic.core.registry;
 import com.kekecreations.jinxedlib.core.util.JinxedRegistryHelper;
 import com.kekecreations.kaleidoscopic.Kaleidoscopic;
 import com.kekecreations.kaleidoscopic.common.block.RockBlock;
+import com.kekecreations.kaleidoscopic.common.block.RockSlabBlock;
 import com.kekecreations.kaleidoscopic.common.block.RockStairBlock;
+import com.kekecreations.kaleidoscopic.common.block.RockWallBlock;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
@@ -15,6 +17,8 @@ import java.util.function.Supplier;
 public class KBlocks {
     public static final HashMap<DyeColor, Supplier<Block>> DYED_ROCKS = new HashMap<>();
     public static final HashMap<DyeColor, Supplier<Block>> DYED_ROCK_STAIRS = new HashMap<>();
+    public static final HashMap<DyeColor, Supplier<Block>> DYED_ROCK_SLABS = new HashMap<>();
+    public static final HashMap<DyeColor, Supplier<Block>> DYED_ROCK_WALLS = new HashMap<>();
 
 
     static {
@@ -22,6 +26,8 @@ public class KBlocks {
             //DYED ROCKS
             DYED_ROCKS.put(colour, registerBlock(colour + "_rock", true, () -> new RockBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.COBBLESTONE.defaultBlockState().getBlock()))));
             DYED_ROCK_STAIRS.put(colour, registerBlock(colour + "_rock_stairs", true, () -> new RockStairBlock(DYED_ROCKS.get(colour).get().defaultBlockState(), BlockBehaviour.Properties.ofFullCopy(DYED_ROCKS.get(colour).get()))));
+            DYED_ROCK_SLABS.put(colour, registerBlock(colour + "_rock_slab", true, () -> new RockSlabBlock(BlockBehaviour.Properties.ofFullCopy(DYED_ROCKS.get(colour).get()))));
+            DYED_ROCK_WALLS.put(colour, registerBlock(colour + "_rock_wall", true, () -> new RockWallBlock(BlockBehaviour.Properties.ofFullCopy(DYED_ROCKS.get(colour).get()))));
         }
     }
 

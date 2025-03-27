@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "cyan_rock": {
+      "conditions": {
+        "items": [
+          {
+            "items": "kaleidoscopic:cyan_rock"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "kaleidoscopic:cyan_rock_slab"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "cyan_rock"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "kaleidoscopic:cyan_rock_slab"
+    ]
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "kaleidoscopic:block/red_rock_slab"
+    },
+    "type=double": {
+      "model": "kaleidoscopic:block/red_rock"
+    },
+    "type=top": {
+      "model": "kaleidoscopic:block/red_rock_slab_top"
+    }
+  }
+}

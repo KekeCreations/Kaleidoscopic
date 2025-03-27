@@ -7,6 +7,7 @@ public class NeoForgeConfig {
     public static final ModConfigSpec SPEC;
 
     public static final ModConfigSpec.BooleanValue IS_DYED_ROCK_ENABLED;
+    public static final ModConfigSpec.BooleanValue IS_DYED_ROCK_VARIANTS_ENABLED;
 
 
     static {
@@ -19,6 +20,11 @@ public class NeoForgeConfig {
         IS_DYED_ROCK_ENABLED = BUILDER
                 .comment("Enables Dyed Rock blocks")
                 .define("dyedRockBlocks", true);
+
+        IS_DYED_ROCK_VARIANTS_ENABLED = BUILDER
+                .comment("Enables Dyed Rock block variants")
+                .define("dyedRockVariantBlocks", true);
+
 
 
         BUILDER.pop();

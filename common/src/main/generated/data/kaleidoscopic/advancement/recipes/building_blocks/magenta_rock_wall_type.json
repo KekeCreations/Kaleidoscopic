@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:magenta_rock_wall_type"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "magenta_rock_wall": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:magenta_dye"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "magenta_rock_wall"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:magenta_rock_wall_type"
+    ]
+  }
+}

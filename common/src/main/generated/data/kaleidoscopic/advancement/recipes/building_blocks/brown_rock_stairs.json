@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "brown_rock": {
+      "conditions": {
+        "items": [
+          {
+            "items": "kaleidoscopic:brown_rock"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "kaleidoscopic:brown_rock_stairs"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "brown_rock"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "kaleidoscopic:brown_rock_stairs"
+    ]
+  }
+}

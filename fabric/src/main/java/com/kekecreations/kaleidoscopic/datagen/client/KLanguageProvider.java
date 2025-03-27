@@ -21,6 +21,8 @@ public class KLanguageProvider extends FabricLanguageProvider {
 
             builder.add(KBlocks.DYED_ROCKS.get(colour).get(), stringColour + " Rock");
             builder.add(KBlocks.DYED_ROCK_STAIRS.get(colour).get(), stringColour + " Rock Stairs");
+            builder.add(KBlocks.DYED_ROCK_SLABS.get(colour).get(), stringColour + " Rock Slab");
+            builder.add(KBlocks.DYED_ROCK_WALLS.get(colour).get(), stringColour + " Rock Wall");
         }
 
     }

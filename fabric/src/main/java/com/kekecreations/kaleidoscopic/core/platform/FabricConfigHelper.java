@@ -13,4 +13,12 @@ public class FabricConfigHelper implements IConfigHelper {
         }
         return false;
     }
+
+    @Override
+    public boolean isDyedRockVariantsEnabled() {
+        if (FabricKaleidoscopic.getConfig() != null) {
+            return FabricKaleidoscopic.getConfig().isDyedRockVariantsEnabled();
+        }
+        return false;
+    }
 }
