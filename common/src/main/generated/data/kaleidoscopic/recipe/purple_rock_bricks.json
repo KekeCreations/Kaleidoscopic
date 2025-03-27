@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "K": {
+      "item": "kaleidoscopic:purple_rock"
+    }
+  },
+  "pattern": [
+    "KK",
+    "KK"
+  ],
+  "result": {
+    "count": 4,
+    "id": "kaleidoscopic:purple_rock_bricks"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "K": {
+      "item": "kaleidoscopic:orange_rock_bricks"
+    }
+  },
+  "pattern": [
+    "KKK",
+    "KKK"
+  ],
+  "result": {
+    "count": 6,
+    "id": "kaleidoscopic:orange_rock_brick_wall"
+  }
+}

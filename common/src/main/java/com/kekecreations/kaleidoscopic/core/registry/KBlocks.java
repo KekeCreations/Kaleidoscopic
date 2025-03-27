@@ -20,6 +20,11 @@ public class KBlocks {
     public static final HashMap<DyeColor, Supplier<Block>> DYED_ROCK_SLABS = new HashMap<>();
     public static final HashMap<DyeColor, Supplier<Block>> DYED_ROCK_WALLS = new HashMap<>();
 
+    public static final HashMap<DyeColor, Supplier<Block>> DYED_ROCK_BRICKS = new HashMap<>();
+    public static final HashMap<DyeColor, Supplier<Block>> DYED_ROCK_BRICK_STAIRS = new HashMap<>();
+    public static final HashMap<DyeColor, Supplier<Block>> DYED_ROCK_BRICK_SLABS = new HashMap<>();
+    public static final HashMap<DyeColor, Supplier<Block>> DYED_ROCK_BRICK_WALLS = new HashMap<>();
+
 
     static {
         for (DyeColor colour : DyeColor.values()) {
@@ -28,6 +33,11 @@ public class KBlocks {
             DYED_ROCK_STAIRS.put(colour, registerBlock(colour + "_rock_stairs", true, () -> new RockStairBlock(DYED_ROCKS.get(colour).get().defaultBlockState(), BlockBehaviour.Properties.ofFullCopy(DYED_ROCKS.get(colour).get()))));
             DYED_ROCK_SLABS.put(colour, registerBlock(colour + "_rock_slab", true, () -> new RockSlabBlock(BlockBehaviour.Properties.ofFullCopy(DYED_ROCKS.get(colour).get()))));
             DYED_ROCK_WALLS.put(colour, registerBlock(colour + "_rock_wall", true, () -> new RockWallBlock(BlockBehaviour.Properties.ofFullCopy(DYED_ROCKS.get(colour).get()))));
+            //DYED ROCK BRICKS
+            DYED_ROCK_BRICKS.put(colour, registerBlock(colour + "_rock_bricks", true, () -> new RockBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_BRICKS.defaultBlockState().getBlock()))));
+            DYED_ROCK_BRICK_STAIRS.put(colour, registerBlock(colour + "_rock_brick_stairs", true, () -> new RockStairBlock(DYED_ROCK_BRICKS.get(colour).get().defaultBlockState(), BlockBehaviour.Properties.ofFullCopy(DYED_ROCK_BRICKS.get(colour).get()))));
+            DYED_ROCK_BRICK_SLABS.put(colour, registerBlock(colour + "_rock_brick_slab", true, () -> new RockSlabBlock(BlockBehaviour.Properties.ofFullCopy(DYED_ROCK_BRICKS.get(colour).get()))));
+            DYED_ROCK_BRICK_WALLS.put(colour, registerBlock(colour + "_rock_brick_wall", true, () -> new RockWallBlock(BlockBehaviour.Properties.ofFullCopy(DYED_ROCK_BRICKS.get(colour).get()))));
         }
     }
 
