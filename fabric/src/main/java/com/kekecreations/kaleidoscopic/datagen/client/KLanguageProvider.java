@@ -19,6 +19,7 @@ public class KLanguageProvider extends FabricLanguageProvider {
         for (DyeColor colour : DyeColor.values()) {
             String stringColour = StringUtils.capitalize(StringUtils.replace(StringUtils.replace(StringUtils.replace(colour.getName(), "blue", "Blue"), "gray", "Gray"), "_", " "));
 
+            builder.add(KBlocks.CHISELED_DYED_ROCKS.get(colour).get(), "Chiseled " + stringColour + " Rock");
             builder.add(KBlocks.DYED_ROCKS.get(colour).get(), stringColour + " Rock");
             builder.add(KBlocks.DYED_ROCK_STAIRS.get(colour).get(), stringColour + " Rock Stairs");
             builder.add(KBlocks.DYED_ROCK_SLABS.get(colour).get(), stringColour + " Rock Slab");

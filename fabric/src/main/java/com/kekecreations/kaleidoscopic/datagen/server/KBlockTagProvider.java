@@ -23,6 +23,7 @@ public class KBlockTagProvider extends FabricTagProvider.BlockTagProvider{
     private void pickaxeMineable() {
         for (DyeColor colour : DyeColor.values()) {
             this.getOrCreateTagBuilder(BlockTags.MINEABLE_WITH_PICKAXE)
+                    .add(KBlocks.CHISELED_DYED_ROCKS.get(colour).get())
                     .add(KBlocks.DYED_ROCKS.get(colour).get())
                     .add(KBlocks.DYED_ROCK_STAIRS.get(colour).get())
                     .add(KBlocks.DYED_ROCK_SLABS.get(colour).get())

@@ -23,6 +23,7 @@ public class KBlockLootTableProvider extends FabricBlockLootTableProvider {
 
     private void dyedRocks() {
         for (DyeColor colour : DyeColor.values()) {
+            dropSelf(KBlocks.CHISELED_DYED_ROCKS.get(colour).get());
             dropSelf(KBlocks.DYED_ROCKS.get(colour).get());
             add(KBlocks.DYED_ROCK_SLABS.get(colour).get(), createSlabItemTable(KBlocks.DYED_ROCK_SLABS.get(colour).get()));
             dropSelf(KBlocks.DYED_ROCK_STAIRS.get(colour).get());

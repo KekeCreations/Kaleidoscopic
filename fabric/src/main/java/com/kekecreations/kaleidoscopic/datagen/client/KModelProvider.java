@@ -16,6 +16,7 @@ public class KModelProvider extends FabricModelProvider {
     public void generateBlockStateModels(BlockModelGenerators generator) {
 
         for (DyeColor colour : DyeColor.values()) {
+            generator.createTrivialCube(KBlocks.CHISELED_DYED_ROCKS.get(colour).get());
             BlockModelGenerators.BlockFamilyProvider rockBlock = generator.family(KBlocks.DYED_ROCKS.get(colour).get());
             rockBlock.stairs(KBlocks.DYED_ROCK_STAIRS.get(colour).get());
             rockBlock.slab(KBlocks.DYED_ROCK_SLABS.get(colour).get());

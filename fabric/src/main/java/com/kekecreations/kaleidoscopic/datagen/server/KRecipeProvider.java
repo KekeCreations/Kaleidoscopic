@@ -26,6 +26,7 @@ public class KRecipeProvider  extends FabricRecipeProvider {
     public void buildRecipes(RecipeOutput recipeOutput) {
         for (DyeColor dyeColour : DyeColor.values()) {
             //Dyed Rocks
+            chiselRecipe(KBlocks.DYED_ROCK_SLABS.get(dyeColour).get(), KBlocks.CHISELED_DYED_ROCKS.get(dyeColour).get(), recipeOutput);
             dyeSquareRecipe(Ingredient.of(KTags.ItemTags.CAN_CRAFT_ROCK), dyeColour, KBlocks.DYED_ROCKS.get(dyeColour).get(), recipeOutput);
             dyeSquareRecipe(Ingredient.of(KTags.ItemTags.CAN_CRAFT_ROCK_STAIRS), dyeColour, KBlocks.DYED_ROCK_STAIRS.get(dyeColour).get(), recipeOutput);
             dyeSquareRecipe(Ingredient.of(KTags.ItemTags.CAN_CRAFT_ROCK_SLAB), dyeColour, KBlocks.DYED_ROCK_SLABS.get(dyeColour).get(), recipeOutput);
@@ -53,6 +54,15 @@ public class KRecipeProvider  extends FabricRecipeProvider {
                 .define('X', DyeItem.byColor(dyeColour))
                 .unlockedBy(getItemName(resultBlock), has(DyeItem.byColor(dyeColour)))
                 .save(output, getItemName(resultBlock) + "_type");
+    }
+
+    protected static void chiselRecipe(Block craftingBlock, Block resultBlock, RecipeOutput recipeConsumer) {
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, resultBlock ,1)
+                .pattern("K")
+                .pattern("K")
+                .define('K', craftingBlock)
+                .unlockedBy(getItemName(craftingBlock), has(craftingBlock))
+                .save(recipeConsumer);
     }
 
     protected static void typeRecipe(Block craftingBlock, Block resultBlock, RecipeOutput recipeConsumer) {

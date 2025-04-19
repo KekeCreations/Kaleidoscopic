@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "K": {
+      "item": "kaleidoscopic:pink_rock_slab"
+    }
+  },
+  "pattern": [
+    "K",
+    "K"
+  ],
+  "result": {
+    "count": 1,
+    "id": "kaleidoscopic:chiseled_pink_rock"
+  }
+}

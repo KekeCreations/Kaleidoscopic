@@ -15,6 +15,7 @@ import java.util.HashMap;
 import java.util.function.Supplier;
 
 public class KBlocks {
+    public static final HashMap<DyeColor, Supplier<Block>> CHISELED_DYED_ROCKS = new HashMap<>();
     public static final HashMap<DyeColor, Supplier<Block>> DYED_ROCKS = new HashMap<>();
     public static final HashMap<DyeColor, Supplier<Block>> DYED_ROCK_STAIRS = new HashMap<>();
     public static final HashMap<DyeColor, Supplier<Block>> DYED_ROCK_SLABS = new HashMap<>();
@@ -38,6 +39,8 @@ public class KBlocks {
             DYED_ROCK_BRICK_STAIRS.put(colour, registerBlock(colour + "_rock_brick_stairs", true, () -> new RockStairBlock(DYED_ROCK_BRICKS.get(colour).get().defaultBlockState(), BlockBehaviour.Properties.ofFullCopy(DYED_ROCK_BRICKS.get(colour).get()))));
             DYED_ROCK_BRICK_SLABS.put(colour, registerBlock(colour + "_rock_brick_slab", true, () -> new RockSlabBlock(BlockBehaviour.Properties.ofFullCopy(DYED_ROCK_BRICKS.get(colour).get()))));
             DYED_ROCK_BRICK_WALLS.put(colour, registerBlock(colour + "_rock_brick_wall", true, () -> new RockWallBlock(BlockBehaviour.Properties.ofFullCopy(DYED_ROCK_BRICKS.get(colour).get()))));
+            //DYED CHISELED ROCK
+            CHISELED_DYED_ROCKS.put(colour, registerBlock("chiseled_" + colour + "_rock", true, () -> new RockBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.COBBLESTONE.defaultBlockState().getBlock()))));
         }
     }
 
