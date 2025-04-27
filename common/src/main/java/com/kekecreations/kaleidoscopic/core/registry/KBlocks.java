@@ -6,7 +6,11 @@ import com.kekecreations.kaleidoscopic.common.block.RockBlock;
 import com.kekecreations.kaleidoscopic.common.block.RockSlabBlock;
 import com.kekecreations.kaleidoscopic.common.block.RockStairBlock;
 import com.kekecreations.kaleidoscopic.common.block.RockWallBlock;
+import com.kekecreations.kaleidoscopic.common.item.RockBlockItem;
+import com.kekecreations.kaleidoscopic.common.item.RockVariantBlockItem;
+import com.kekecreations.kaleidoscopic.core.platform.Services;
 import net.minecraft.world.item.DyeColor;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockBehaviour;
@@ -30,23 +34,31 @@ public class KBlocks {
     static {
         for (DyeColor colour : DyeColor.values()) {
             //DYED ROCKS
-            DYED_ROCKS.put(colour, registerBlock(colour + "_rock", true, () -> new RockBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.COBBLESTONE.defaultBlockState().getBlock()))));
-            DYED_ROCK_STAIRS.put(colour, registerBlock(colour + "_rock_stairs", true, () -> new RockStairBlock(DYED_ROCKS.get(colour).get().defaultBlockState(), BlockBehaviour.Properties.ofFullCopy(DYED_ROCKS.get(colour).get()))));
-            DYED_ROCK_SLABS.put(colour, registerBlock(colour + "_rock_slab", true, () -> new RockSlabBlock(BlockBehaviour.Properties.ofFullCopy(DYED_ROCKS.get(colour).get()))));
-            DYED_ROCK_WALLS.put(colour, registerBlock(colour + "_rock_wall", true, () -> new RockWallBlock(BlockBehaviour.Properties.ofFullCopy(DYED_ROCKS.get(colour).get()))));
+            DYED_ROCKS.put(colour, registerRockBlock(colour + "_rock",  () -> new RockBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.COBBLESTONE.defaultBlockState().getBlock()))));
+            DYED_ROCK_STAIRS.put(colour, registerRockVariantBlock(colour + "_rock_stairs",  () -> new RockStairBlock(DYED_ROCKS.get(colour).get().defaultBlockState(), BlockBehaviour.Properties.ofFullCopy(DYED_ROCKS.get(colour).get()))));
+            DYED_ROCK_SLABS.put(colour, registerRockVariantBlock(colour + "_rock_slab",  () -> new RockSlabBlock(BlockBehaviour.Properties.ofFullCopy(DYED_ROCKS.get(colour).get()))));
+            DYED_ROCK_WALLS.put(colour, registerRockVariantBlock(colour + "_rock_wall", () -> new RockWallBlock(BlockBehaviour.Properties.ofFullCopy(DYED_ROCKS.get(colour).get()))));
             //DYED ROCK BRICKS
-            DYED_ROCK_BRICKS.put(colour, registerBlock(colour + "_rock_bricks", true, () -> new RockBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_BRICKS.defaultBlockState().getBlock()))));
-            DYED_ROCK_BRICK_STAIRS.put(colour, registerBlock(colour + "_rock_brick_stairs", true, () -> new RockStairBlock(DYED_ROCK_BRICKS.get(colour).get().defaultBlockState(), BlockBehaviour.Properties.ofFullCopy(DYED_ROCK_BRICKS.get(colour).get()))));
-            DYED_ROCK_BRICK_SLABS.put(colour, registerBlock(colour + "_rock_brick_slab", true, () -> new RockSlabBlock(BlockBehaviour.Properties.ofFullCopy(DYED_ROCK_BRICKS.get(colour).get()))));
-            DYED_ROCK_BRICK_WALLS.put(colour, registerBlock(colour + "_rock_brick_wall", true, () -> new RockWallBlock(BlockBehaviour.Properties.ofFullCopy(DYED_ROCK_BRICKS.get(colour).get()))));
+            DYED_ROCK_BRICKS.put(colour, registerRockBlock(colour + "_rock_bricks", () -> new RockBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_BRICKS.defaultBlockState().getBlock()))));
+            DYED_ROCK_BRICK_STAIRS.put(colour, registerRockVariantBlock(colour + "_rock_brick_stairs",  () -> new RockStairBlock(DYED_ROCK_BRICKS.get(colour).get().defaultBlockState(), BlockBehaviour.Properties.ofFullCopy(DYED_ROCK_BRICKS.get(colour).get()))));
+            DYED_ROCK_BRICK_SLABS.put(colour, registerRockVariantBlock(colour + "_rock_brick_slab", () -> new RockSlabBlock(BlockBehaviour.Properties.ofFullCopy(DYED_ROCK_BRICKS.get(colour).get()))));
+            DYED_ROCK_BRICK_WALLS.put(colour, registerRockVariantBlock(colour + "_rock_brick_wall", () -> new RockWallBlock(BlockBehaviour.Properties.ofFullCopy(DYED_ROCK_BRICKS.get(colour).get()))));
             //DYED CHISELED ROCK
-            CHISELED_DYED_ROCKS.put(colour, registerBlock("chiseled_" + colour + "_rock", true, () -> new RockBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.COBBLESTONE.defaultBlockState().getBlock()))));
+            CHISELED_DYED_ROCKS.put(colour, registerRockBlock("chiseled_" + colour + "_rock", () -> new RockBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.COBBLESTONE.defaultBlockState().getBlock()))));
         }
     }
 
 
-    public static Supplier<Block> registerBlock(String name, boolean hasItem, Supplier<Block> blockSupplier) {
-        return JinxedRegistryHelper.registerBlock(Kaleidoscopic.MOD_ID, name, hasItem, blockSupplier);
+    public static Supplier<Block> registerRockBlock(String name, Supplier<Block> blockSupplier) {
+        var block = JinxedRegistryHelper.registerBlock(Kaleidoscopic.MOD_ID, name, false, blockSupplier);
+        JinxedRegistryHelper.registerItem(Kaleidoscopic.MOD_ID, name, () -> new RockBlockItem(block.get(), new Item.Properties()));
+        return block;
+    }
+
+    public static Supplier<Block> registerRockVariantBlock(String name, Supplier<Block> blockSupplier) {
+        var block = JinxedRegistryHelper.registerBlock(Kaleidoscopic.MOD_ID, name, false, blockSupplier);
+        JinxedRegistryHelper.registerItem(Kaleidoscopic.MOD_ID, name, () -> new RockVariantBlockItem(block.get(), new Item.Properties()));
+        return block;
     }
 
     public static void loadClass() {}

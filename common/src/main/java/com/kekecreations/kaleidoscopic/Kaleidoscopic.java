@@ -2,6 +2,7 @@ package com.kekecreations.kaleidoscopic;
 
 
 import com.kekecreations.kaleidoscopic.core.registry.KBlocks;
+import com.kekecreations.kaleidoscopic.core.registry.KTabs;
 import net.minecraft.resources.ResourceLocation;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -14,6 +15,7 @@ public class Kaleidoscopic {
 
     public static void init() {
         KBlocks.loadClass();
+        KTabs.register();
     }
 
 

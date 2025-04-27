@@ -142,5 +142,6 @@
   "block.kaleidoscopic.yellow_rock_bricks": "Yellow Rock Bricks",
   "block.kaleidoscopic.yellow_rock_slab": "Yellow Rock Slab",
   "block.kaleidoscopic.yellow_rock_stairs": "Yellow Rock Stairs",
-  "block.kaleidoscopic.yellow_rock_wall": "Yellow Rock Wall"
+  "block.kaleidoscopic.yellow_rock_wall": "Yellow Rock Wall",
+  "tab.kaleidoscopic.configurable_tab": "Kaleidoscopic"
 }
