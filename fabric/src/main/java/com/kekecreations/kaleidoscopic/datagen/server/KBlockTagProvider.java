@@ -18,6 +18,8 @@ public class KBlockTagProvider extends FabricTagProvider.BlockTagProvider{
     @Override
     protected void addTags(HolderLookup.Provider provider) {
         pickaxeMineable();
+        axeMineable();
+        climbable();
     }
 
     private void pickaxeMineable() {
@@ -32,6 +34,20 @@ public class KBlockTagProvider extends FabricTagProvider.BlockTagProvider{
                     .add(KBlocks.DYED_ROCK_BRICK_STAIRS.get(colour).get())
                     .add(KBlocks.DYED_ROCK_BRICK_SLABS.get(colour).get())
                     .add(KBlocks.DYED_ROCK_BRICK_WALLS.get(colour).get());
+        }
+    }
+
+    private void axeMineable() {
+        for (DyeColor colour : DyeColor.values()) {
+            this.getOrCreateTagBuilder(BlockTags.MINEABLE_WITH_AXE)
+                    .add(KBlocks.DYED_LADDERS.get(colour).get());
+        }
+    }
+
+    private void climbable() {
+        for (DyeColor colour : DyeColor.values()) {
+            this.getOrCreateTagBuilder(BlockTags.CLIMBABLE)
+                    .add(KBlocks.DYED_LADDERS.get(colour).get());
         }
     }
 

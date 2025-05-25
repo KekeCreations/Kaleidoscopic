@@ -21,4 +21,12 @@ public class NeoForgeConfigHelper implements IConfigHelper {
         }
         return NeoForgeConfig.IS_DYED_ROCK_VARIANTS_ENABLED.get();
     }
+
+    @Override
+    public boolean areDyedLaddersEnabled() {
+        if (!NeoForgeConfig.SPEC.isLoaded()) {
+            return true;
+        }
+        return NeoForgeConfig.ARE_DYED_LADDERS_ENABLED.get();
+    }
 }

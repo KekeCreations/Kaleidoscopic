@@ -29,6 +29,8 @@ public class KLanguageProvider extends FabricLanguageProvider {
             builder.add(KBlocks.DYED_ROCK_BRICK_STAIRS.get(colour).get(), stringColour + " Rock Brick Stairs");
             builder.add(KBlocks.DYED_ROCK_BRICK_SLABS.get(colour).get(), stringColour + " Rock Brick Slab");
             builder.add(KBlocks.DYED_ROCK_BRICK_WALLS.get(colour).get(), stringColour + " Rock Brick Wall");
+
+            builder.add(KBlocks.DYED_LADDERS.get(colour).get(), stringColour + " Ladder");
         }
         builder.add("tab.kaleidoscopic.configurable_tab", "Kaleidoscopic");
 

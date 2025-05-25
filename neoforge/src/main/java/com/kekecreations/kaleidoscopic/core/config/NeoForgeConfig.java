@@ -9,6 +9,8 @@ public class NeoForgeConfig {
     public static final ModConfigSpec.BooleanValue IS_DYED_ROCK_ENABLED;
     public static final ModConfigSpec.BooleanValue IS_DYED_ROCK_VARIANTS_ENABLED;
 
+    public static final ModConfigSpec.BooleanValue ARE_DYED_LADDERS_ENABLED;
+
 
     static {
         BUILDER.push("Kaleidoscopic Config");
@@ -24,6 +26,10 @@ public class NeoForgeConfig {
         IS_DYED_ROCK_VARIANTS_ENABLED = BUILDER
                 .comment("Enables Dyed Rock block variants")
                 .define("dyedRockVariantBlocks", true);
+
+        ARE_DYED_LADDERS_ENABLED = BUILDER
+                .comment("Enables Dyed Ladders!")
+                .define("dyedLadders", true);
 
 
 

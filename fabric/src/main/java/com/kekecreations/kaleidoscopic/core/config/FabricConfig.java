@@ -117,4 +117,11 @@ public class FabricConfig implements CustomPacketPayload {
     public boolean isDyedRockVariantsEnabled() {
         return isDyedRockVariantsEnabled;
     }
+
+    @Comment("Enables Dyed Ladders!")
+    private boolean areDyedLaddersEnabled = true;
+
+    public boolean areDyedLaddersEnabled() {
+        return areDyedLaddersEnabled;
+    }
 }

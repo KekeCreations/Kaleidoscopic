@@ -17,10 +17,18 @@ public class KTabs {
             .icon(() -> KBlocks.DYED_ROCKS.get(DyeColor.BLUE).get().asItem().getDefaultInstance())
             .displayItems((params, pOutput) -> {
                 for (DyeColor colour : JinxedCreativeCategoryUtils.colourOrder) {
+                    pOutput.accept(KBlocks.DYED_LADDERS.get(colour).get());
+                    }
+                for (DyeColor colour : JinxedCreativeCategoryUtils.colourOrder) {
                     pOutput.accept(KBlocks.DYED_ROCKS.get(colour).get());
+                    pOutput.accept(KBlocks.DYED_ROCK_BRICKS.get(colour).get());
+                    pOutput.accept(KBlocks.CHISELED_DYED_ROCKS.get(colour).get());
                     pOutput.accept(KBlocks.DYED_ROCK_STAIRS.get(colour).get());
+                    pOutput.accept(KBlocks.DYED_ROCK_BRICK_STAIRS.get(colour).get());
                     pOutput.accept(KBlocks.DYED_ROCK_SLABS.get(colour).get());
+                    pOutput.accept(KBlocks.DYED_ROCK_BRICK_SLABS.get(colour).get());
                     pOutput.accept(KBlocks.DYED_ROCK_WALLS.get(colour).get());
+                    pOutput.accept(KBlocks.DYED_ROCK_BRICK_WALLS.get(colour).get());
                 }
 
             })

@@ -5,4 +5,6 @@ public interface IConfigHelper {
     boolean isDyedRockEnabled();
 
     boolean isDyedRockVariantsEnabled();
+
+    boolean areDyedLaddersEnabled();
 }

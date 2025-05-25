@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "brown_ladder": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:brown_dye"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:brown_ladder_type"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "brown_ladder"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:brown_ladder_type"
+    ]
+  }
+}

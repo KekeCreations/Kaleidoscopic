@@ -21,4 +21,12 @@ public class FabricConfigHelper implements IConfigHelper {
         }
         return false;
     }
+
+    @Override
+    public boolean areDyedLaddersEnabled() {
+        if (FabricKaleidoscopic.getConfig() != null) {
+            return FabricKaleidoscopic.getConfig().areDyedLaddersEnabled();
+        }
+        return false;
+    }
 }

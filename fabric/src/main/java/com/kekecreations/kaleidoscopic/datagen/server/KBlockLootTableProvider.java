@@ -19,6 +19,7 @@ public class KBlockLootTableProvider extends FabricBlockLootTableProvider {
     public void generate() {
         dyedRocks();
         dyedRockBricks();
+        ladders();
     }
 
     private void dyedRocks() {
@@ -37,6 +38,12 @@ public class KBlockLootTableProvider extends FabricBlockLootTableProvider {
             add(KBlocks.DYED_ROCK_BRICK_SLABS.get(colour).get(), createSlabItemTable(KBlocks.DYED_ROCK_BRICK_SLABS.get(colour).get()));
             dropSelf(KBlocks.DYED_ROCK_BRICK_STAIRS.get(colour).get());
             dropSelf(KBlocks.DYED_ROCK_BRICK_WALLS.get(colour).get());
+        }
+    }
+
+    private void ladders() {
+        for (DyeColor colour : DyeColor.values()) {
+            dropSelf(KBlocks.DYED_LADDERS.get(colour).get());
         }
     }
 }

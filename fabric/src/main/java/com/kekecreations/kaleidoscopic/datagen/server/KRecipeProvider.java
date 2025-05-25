@@ -10,6 +10,8 @@ import net.minecraft.data.recipes.RecipeOutput;
 import net.minecraft.data.recipes.ShapedRecipeBuilder;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.DyeItem;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.block.Block;
 
@@ -39,6 +41,8 @@ public class KRecipeProvider  extends FabricRecipeProvider {
             stairRecipe(KBlocks.DYED_ROCK_BRICKS.get(dyeColour).get(), KBlocks.DYED_ROCK_BRICK_STAIRS.get(dyeColour).get(), recipeOutput);
             slabRecipe(KBlocks.DYED_ROCK_BRICKS.get(dyeColour).get(), KBlocks.DYED_ROCK_BRICK_SLABS.get(dyeColour).get(), recipeOutput);
             wallRecipe(KBlocks.DYED_ROCK_BRICKS.get(dyeColour).get(), KBlocks.DYED_ROCK_BRICK_WALLS.get(dyeColour).get(), recipeOutput);
+            //Dyed Ladders
+            dyeSquareRecipe(Ingredient.of(new ItemStack(Items.LADDER)), dyeColour, KBlocks.DYED_LADDERS.get(dyeColour).get(), recipeOutput);
 
         }
 

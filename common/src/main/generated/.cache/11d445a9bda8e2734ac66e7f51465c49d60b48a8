@@ -1,2 +1,4 @@
-// 1.21.1	2025-04-27T04:53:16.664759	Kaleidoscopic/Tags for minecraft:block
+// 1.21.1	2025-05-25T23:43:00.4277367	Kaleidoscopic/Tags for minecraft:block
+6c6de0928a8fb8866a3cd2d0179be12e6c550313 data\minecraft\tags\block\mineable\axe.json
 f97159da2df9924acb99533f16200ef5732e79d4 data\minecraft\tags\block\mineable\pickaxe.json
+6c6de0928a8fb8866a3cd2d0179be12e6c550313 data\minecraft\tags\block\climbable.json
