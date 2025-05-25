@@ -29,18 +29,29 @@ public class KRecipeProvider  extends FabricRecipeProvider {
         for (DyeColor dyeColour : DyeColor.values()) {
             //Dyed Rocks
             chiselRecipe(KBlocks.DYED_ROCK_SLABS.get(dyeColour).get(), KBlocks.CHISELED_DYED_ROCKS.get(dyeColour).get(), recipeOutput);
+            stonecutterResultFromBase(recipeOutput, RecipeCategory.BUILDING_BLOCKS, KBlocks.CHISELED_DYED_ROCKS.get(dyeColour).get(), KBlocks.DYED_ROCKS.get(dyeColour).get());
             dyeSquareRecipe(Ingredient.of(KTags.ItemTags.CAN_CRAFT_ROCK), dyeColour, KBlocks.DYED_ROCKS.get(dyeColour).get(), recipeOutput);
             dyeSquareRecipe(Ingredient.of(KTags.ItemTags.CAN_CRAFT_ROCK_STAIRS), dyeColour, KBlocks.DYED_ROCK_STAIRS.get(dyeColour).get(), recipeOutput);
+            stonecutterResultFromBase(recipeOutput, RecipeCategory.BUILDING_BLOCKS, KBlocks.DYED_ROCK_STAIRS.get(dyeColour).get(), KBlocks.DYED_ROCKS.get(dyeColour).get());
             dyeSquareRecipe(Ingredient.of(KTags.ItemTags.CAN_CRAFT_ROCK_SLAB), dyeColour, KBlocks.DYED_ROCK_SLABS.get(dyeColour).get(), recipeOutput);
+            stonecutterResultFromBase(recipeOutput, RecipeCategory.BUILDING_BLOCKS, KBlocks.DYED_ROCK_SLABS.get(dyeColour).get(), KBlocks.DYED_ROCKS.get(dyeColour).get());
             dyeSquareRecipe(Ingredient.of(KTags.ItemTags.CAN_CRAFT_ROCK_WALL), dyeColour, KBlocks.DYED_ROCK_WALLS.get(dyeColour).get(), recipeOutput);
+            stonecutterResultFromBase(recipeOutput, RecipeCategory.BUILDING_BLOCKS, KBlocks.DYED_ROCK_WALLS.get(dyeColour).get(), KBlocks.DYED_ROCKS.get(dyeColour).get());
             stairRecipe(KBlocks.DYED_ROCKS.get(dyeColour).get(), KBlocks.DYED_ROCK_STAIRS.get(dyeColour).get(), recipeOutput);
             slabRecipe(KBlocks.DYED_ROCKS.get(dyeColour).get(), KBlocks.DYED_ROCK_SLABS.get(dyeColour).get(), recipeOutput);
             wallRecipe(KBlocks.DYED_ROCKS.get(dyeColour).get(), KBlocks.DYED_ROCK_WALLS.get(dyeColour).get(), recipeOutput);
             //Dyed Rock Bricks
             typeRecipe(KBlocks.DYED_ROCKS.get(dyeColour).get(), KBlocks.DYED_ROCK_BRICKS.get(dyeColour).get(), recipeOutput);
+            stonecutterResultFromBase(recipeOutput, RecipeCategory.BUILDING_BLOCKS, KBlocks.DYED_ROCK_BRICKS.get(dyeColour).get(), KBlocks.DYED_ROCKS.get(dyeColour).get());
             stairRecipe(KBlocks.DYED_ROCK_BRICKS.get(dyeColour).get(), KBlocks.DYED_ROCK_BRICK_STAIRS.get(dyeColour).get(), recipeOutput);
+            stonecutterResultFromBase(recipeOutput, RecipeCategory.BUILDING_BLOCKS, KBlocks.DYED_ROCK_BRICK_STAIRS.get(dyeColour).get(), KBlocks.DYED_ROCKS.get(dyeColour).get());
+            stonecutterResultFromBase(recipeOutput, RecipeCategory.BUILDING_BLOCKS, KBlocks.DYED_ROCK_BRICK_STAIRS.get(dyeColour).get(), KBlocks.DYED_ROCK_BRICKS.get(dyeColour).get());
             slabRecipe(KBlocks.DYED_ROCK_BRICKS.get(dyeColour).get(), KBlocks.DYED_ROCK_BRICK_SLABS.get(dyeColour).get(), recipeOutput);
+            stonecutterResultFromBase(recipeOutput, RecipeCategory.BUILDING_BLOCKS, KBlocks.DYED_ROCK_BRICK_SLABS.get(dyeColour).get(), KBlocks.DYED_ROCKS.get(dyeColour).get());
+            stonecutterResultFromBase(recipeOutput, RecipeCategory.BUILDING_BLOCKS, KBlocks.DYED_ROCK_BRICK_SLABS.get(dyeColour).get(), KBlocks.DYED_ROCK_BRICKS.get(dyeColour).get());
             wallRecipe(KBlocks.DYED_ROCK_BRICKS.get(dyeColour).get(), KBlocks.DYED_ROCK_BRICK_WALLS.get(dyeColour).get(), recipeOutput);
+            stonecutterResultFromBase(recipeOutput, RecipeCategory.BUILDING_BLOCKS, KBlocks.DYED_ROCK_BRICK_WALLS.get(dyeColour).get(), KBlocks.DYED_ROCKS.get(dyeColour).get());
+            stonecutterResultFromBase(recipeOutput, RecipeCategory.BUILDING_BLOCKS, KBlocks.DYED_ROCK_BRICK_WALLS.get(dyeColour).get(), KBlocks.DYED_ROCK_BRICKS.get(dyeColour).get());
             //Dyed Ladders
             dyeSquareRecipe(Ingredient.of(new ItemStack(Items.LADDER)), dyeColour, KBlocks.DYED_LADDERS.get(dyeColour).get(), recipeOutput);
 

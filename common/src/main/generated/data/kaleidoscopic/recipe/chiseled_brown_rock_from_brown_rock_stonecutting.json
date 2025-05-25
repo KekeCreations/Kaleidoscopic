@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "kaleidoscopic:brown_rock"
+  },
+  "result": {
+    "count": 1,
+    "id": "kaleidoscopic:chiseled_brown_rock"
+  }
+}

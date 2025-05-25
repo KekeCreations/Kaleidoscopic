@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "kaleidoscopic:gray_rock"
+  },
+  "result": {
+    "count": 1,
+    "id": "kaleidoscopic:gray_rock_slab"
+  }
+}

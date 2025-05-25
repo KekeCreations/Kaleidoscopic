@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "kaleidoscopic:pink_rock"
+  },
+  "result": {
+    "count": 1,
+    "id": "kaleidoscopic:pink_rock_brick_wall"
+  }
+}
