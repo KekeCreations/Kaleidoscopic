@@ -21,6 +21,10 @@ public class KTags {
         public static final TagKey<Item> CAN_CRAFT_ROCK_WALL
                 = tag("can_craft_rock_wall");
 
+
+        public static final TagKey<Item> CAN_CRAFT_DOOR
+                = tag("can_craft_door");
+
         private static TagKey<Item> tag(String name) {
             return TagKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(Kaleidoscopic.MOD_ID, name));
         }

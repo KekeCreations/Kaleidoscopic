@@ -4,6 +4,7 @@ import com.kekecreations.kaleidoscopic.core.init.KTags;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.minecraft.core.HolderLookup;
+import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.Items;
 
 import java.util.concurrent.CompletableFuture;
@@ -20,6 +21,7 @@ public class KItemTagProvider extends FabricTagProvider.ItemTagProvider{
         canCraftRockStairs();
         canCraftRockSlab();
         canCraftRockWall();
+        canCraftDoor();
 
     }
 
@@ -64,6 +66,21 @@ public class KItemTagProvider extends FabricTagProvider.ItemTagProvider{
                 .add(Items.DIORITE_WALL)
                 .add(Items.GRANITE_WALL)
                 .add(Items.MOSSY_COBBLESTONE_WALL);
+
+    }
+
+    private void canCraftDoor() {
+        this.getOrCreateTagBuilder(KTags.ItemTags.CAN_CRAFT_DOOR).setReplace(false)
+                .addOptionalTag(ItemTags.WOODEN_DOORS)
+                .add(Items.IRON_DOOR)
+                .add(Items.WAXED_COPPER_DOOR)
+                .add(Items.WAXED_OXIDIZED_COPPER_DOOR)
+                .add(Items.WAXED_EXPOSED_COPPER_DOOR)
+                .add(Items.WAXED_WEATHERED_COPPER_DOOR)
+                .add(Items.OXIDIZED_COPPER_DOOR)
+                .add(Items.EXPOSED_COPPER_DOOR)
+                .add(Items.WEATHERED_COPPER_DOOR)
+                .add(Items.COPPER_DOOR);
 
     }
 }

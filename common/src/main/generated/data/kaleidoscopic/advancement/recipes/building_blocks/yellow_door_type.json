@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:yellow_door_type"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "yellow_door": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:yellow_dye"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "yellow_door"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:yellow_door_type"
+    ]
+  }
+}

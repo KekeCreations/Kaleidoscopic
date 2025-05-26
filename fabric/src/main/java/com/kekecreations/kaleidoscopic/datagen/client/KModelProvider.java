@@ -38,6 +38,7 @@ public class KModelProvider extends FabricModelProvider {
 
             createDyedLadder(KBlocks.DYED_LADDERS.get(colour).get(), generator);
             generator.createSimpleFlatItemModel(KBlocks.DYED_LADDERS.get(colour).get());
+            generator.createDoor(KBlocks.DYED_DOORS.get(colour).get());
         }
     }
 

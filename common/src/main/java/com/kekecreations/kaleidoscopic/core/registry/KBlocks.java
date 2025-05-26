@@ -3,6 +3,7 @@ package com.kekecreations.kaleidoscopic.core.registry;
 import com.kekecreations.jinxedlib.core.util.JinxedRegistryHelper;
 import com.kekecreations.kaleidoscopic.Kaleidoscopic;
 import com.kekecreations.kaleidoscopic.common.block.*;
+import com.kekecreations.kaleidoscopic.common.item.DyedDoorBlockItem;
 import com.kekecreations.kaleidoscopic.common.item.DyedLadderBlockItem;
 import com.kekecreations.kaleidoscopic.common.item.RockBlockItem;
 import com.kekecreations.kaleidoscopic.common.item.RockVariantBlockItem;
@@ -13,6 +14,8 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.state.properties.BlockSetType;
+import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.level.material.PushReaction;
 
 import java.util.HashMap;
@@ -33,6 +36,8 @@ public class KBlocks {
 
     public static final HashMap<DyeColor, Supplier<Block>> DYED_LADDERS = new HashMap<>();
 
+    public static final HashMap<DyeColor, Supplier<Block>> DYED_DOORS = new HashMap<>();
+
 
     static {
         for (DyeColor colour : DyeColor.values()) {
@@ -51,6 +56,8 @@ public class KBlocks {
 
 
             DYED_LADDERS.put(colour, registerDyedLadder(colour + "_ladder", () -> new DyedLadderBlock(BlockBehaviour.Properties.of().forceSolidOff().strength(0.4F).sound(SoundType.LADDER).noOcclusion().pushReaction(PushReaction.DESTROY))));
+
+            DYED_DOORS.put(colour, registerDyedDoor(colour + "_door", () -> new DyedDoorBlock(BlockSetType.STONE, BlockBehaviour.Properties.of().mapColor(MapColor.METAL).requiresCorrectToolForDrops().strength(5.0F).noOcclusion().pushReaction(PushReaction.DESTROY))));
         }
     }
 
@@ -70,6 +77,12 @@ public class KBlocks {
     public static Supplier<Block> registerDyedLadder(String name, Supplier<Block> blockSupplier) {
         var block = JinxedRegistryHelper.registerBlock(Kaleidoscopic.MOD_ID, name, false, blockSupplier);
         JinxedRegistryHelper.registerItem(Kaleidoscopic.MOD_ID, name, () -> new DyedLadderBlockItem(block.get(), new Item.Properties()));
+        return block;
+    }
+
+    public static Supplier<Block> registerDyedDoor(String name, Supplier<Block> blockSupplier) {
+        var block = JinxedRegistryHelper.registerBlock(Kaleidoscopic.MOD_ID, name, false, blockSupplier);
+        JinxedRegistryHelper.registerItem(Kaleidoscopic.MOD_ID, name, () -> new DyedDoorBlockItem(block.get(), new Item.Properties()));
         return block;
     }
 

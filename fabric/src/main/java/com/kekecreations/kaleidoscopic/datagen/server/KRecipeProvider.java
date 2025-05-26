@@ -54,6 +54,8 @@ public class KRecipeProvider  extends FabricRecipeProvider {
             stonecutterResultFromBase(recipeOutput, RecipeCategory.BUILDING_BLOCKS, KBlocks.DYED_ROCK_BRICK_WALLS.get(dyeColour).get(), KBlocks.DYED_ROCK_BRICKS.get(dyeColour).get());
             //Dyed Ladders
             dyeSquareRecipe(Ingredient.of(new ItemStack(Items.LADDER)), dyeColour, KBlocks.DYED_LADDERS.get(dyeColour).get(), recipeOutput);
+            //Dyed Doors
+            dyeSquareRecipe(Ingredient.of(KTags.ItemTags.CAN_CRAFT_DOOR), dyeColour, KBlocks.DYED_DOORS.get(dyeColour).get(), recipeOutput);
 
         }
 
