@@ -1,6 +1,6 @@
 {
     "schemaVersion": 1,
-    "id": "${mod_id}",
+    "id": "kaleidoscopic",
     "version": "${version}",
     "name": "${mod_name}",
     "description": "${description}",
@@ -8,8 +8,7 @@
         "${mod_author}"
     ],
     "contact": {
-        "homepage": "https://fabricmc.net/",
-        "sources": "https://github.com/FabricMC/fabric-example-mod"
+        "sources": "https://github.com/KekeCreations/Kaleidoscopic"
     },
     "license": "${license}",
     "icon": "${mod_id}.png",
@@ -33,10 +32,10 @@
         "fabricloader": ">=${fabric_loader_version}",
         "fabric-api": "*",
         "minecraft": "${minecraft_version}",
-        "java": ">=${java_version}"
+        "java": ">=${java_version}",
+        "jinxedlib": ">=1.0.3"
     },
     "suggests": {
-        "another-mod": "*"
     }
 }
   
