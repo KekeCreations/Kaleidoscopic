@@ -22,7 +22,7 @@ public class KItemTagProvider extends FabricTagProvider.ItemTagProvider{
         canCraftRockSlab();
         canCraftRockWall();
         canCraftDoor();
-
+        canCraftTrapdoor();
     }
 
     private void canCraftRock() {
@@ -72,6 +72,12 @@ public class KItemTagProvider extends FabricTagProvider.ItemTagProvider{
     private void canCraftDoor() {
         this.getOrCreateTagBuilder(KTags.ItemTags.CAN_CRAFT_DOOR).setReplace(false)
                 .addOptionalTag(ItemTags.WOODEN_DOORS);
+
+    }
+
+    private void canCraftTrapdoor() {
+        this.getOrCreateTagBuilder(KTags.ItemTags.CAN_CRAFT_TRAPDOOR).setReplace(false)
+                .addOptionalTag(ItemTags.WOODEN_TRAPDOORS);
 
     }
 }

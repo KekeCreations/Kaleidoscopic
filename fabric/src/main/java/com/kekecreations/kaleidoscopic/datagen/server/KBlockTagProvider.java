@@ -43,6 +43,7 @@ public class KBlockTagProvider extends FabricTagProvider.BlockTagProvider{
             this.getOrCreateTagBuilder(BlockTags.MINEABLE_WITH_AXE)
                     .add(KBlocks.DYED_LADDERS.get(colour).get())
                     .add(KBlocks.DYED_DOORS.get(colour).get())
+                    .add(KBlocks.DYED_TRAPDOORS.get(colour).get())
             ;
         }
     }

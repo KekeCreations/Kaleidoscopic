@@ -26,6 +26,7 @@ public class FabricKaleidoscopicClient implements ClientModInitializer {
         for (DyeColor colour : DyeColor.values()) {
             BlockRenderLayerMap.INSTANCE.putBlock(KBlocks.DYED_LADDERS.get(colour).get(), RenderType.cutout());
             BlockRenderLayerMap.INSTANCE.putBlock(KBlocks.DYED_DOORS.get(colour).get(), RenderType.cutout());
+            BlockRenderLayerMap.INSTANCE.putBlock(KBlocks.DYED_TRAPDOORS.get(colour).get(), RenderType.cutout());
         }
     }
 }

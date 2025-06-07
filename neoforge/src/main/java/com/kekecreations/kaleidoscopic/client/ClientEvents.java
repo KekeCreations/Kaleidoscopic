@@ -24,6 +24,7 @@ public class ClientEvents {
         for (DyeColor colour : DyeColor.values()) {
             ItemBlockRenderTypes.setRenderLayer(KBlocks.DYED_LADDERS.get(colour).get(), RenderType.cutout());
             ItemBlockRenderTypes.setRenderLayer(KBlocks.DYED_DOORS.get(colour).get(), RenderType.cutout());
+            ItemBlockRenderTypes.setRenderLayer(KBlocks.DYED_TRAPDOORS.get(colour).get(), RenderType.cutout());
         }
     }
 }
