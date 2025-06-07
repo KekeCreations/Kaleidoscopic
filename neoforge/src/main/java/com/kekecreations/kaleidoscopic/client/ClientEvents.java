@@ -23,6 +23,7 @@ public class ClientEvents {
     public static void clientSetup(FMLClientSetupEvent event) {
         for (DyeColor colour : DyeColor.values()) {
             ItemBlockRenderTypes.setRenderLayer(KBlocks.DYED_LADDERS.get(colour).get(), RenderType.cutout());
+            ItemBlockRenderTypes.setRenderLayer(KBlocks.DYED_DOORS.get(colour).get(), RenderType.cutout());
         }
     }
 }

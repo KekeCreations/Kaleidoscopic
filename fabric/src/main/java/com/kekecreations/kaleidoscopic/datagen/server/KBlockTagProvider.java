@@ -33,14 +33,17 @@ public class KBlockTagProvider extends FabricTagProvider.BlockTagProvider{
                     .add(KBlocks.DYED_ROCK_BRICKS.get(colour).get())
                     .add(KBlocks.DYED_ROCK_BRICK_STAIRS.get(colour).get())
                     .add(KBlocks.DYED_ROCK_BRICK_SLABS.get(colour).get())
-                    .add(KBlocks.DYED_ROCK_BRICK_WALLS.get(colour).get());
+                    .add(KBlocks.DYED_ROCK_BRICK_WALLS.get(colour).get())
+            ;
         }
     }
 
     private void axeMineable() {
         for (DyeColor colour : DyeColor.values()) {
             this.getOrCreateTagBuilder(BlockTags.MINEABLE_WITH_AXE)
-                    .add(KBlocks.DYED_LADDERS.get(colour).get());
+                    .add(KBlocks.DYED_LADDERS.get(colour).get())
+                    .add(KBlocks.DYED_DOORS.get(colour).get())
+            ;
         }
     }
 

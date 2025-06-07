@@ -71,16 +71,7 @@ public class KItemTagProvider extends FabricTagProvider.ItemTagProvider{
 
     private void canCraftDoor() {
         this.getOrCreateTagBuilder(KTags.ItemTags.CAN_CRAFT_DOOR).setReplace(false)
-                .addOptionalTag(ItemTags.WOODEN_DOORS)
-                .add(Items.IRON_DOOR)
-                .add(Items.WAXED_COPPER_DOOR)
-                .add(Items.WAXED_OXIDIZED_COPPER_DOOR)
-                .add(Items.WAXED_EXPOSED_COPPER_DOOR)
-                .add(Items.WAXED_WEATHERED_COPPER_DOOR)
-                .add(Items.OXIDIZED_COPPER_DOOR)
-                .add(Items.EXPOSED_COPPER_DOOR)
-                .add(Items.WEATHERED_COPPER_DOOR)
-                .add(Items.COPPER_DOOR);
+                .addOptionalTag(ItemTags.WOODEN_DOORS);
 
     }
 }

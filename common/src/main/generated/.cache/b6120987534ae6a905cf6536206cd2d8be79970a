@@ -1,6 +1,6 @@
-// 1.21.1	2025-05-26T02:11:26.9760256	Kaleidoscopic/Tags for minecraft:item
+// 1.21.1	2025-06-07T02:34:09.7003161	Kaleidoscopic/Tags for minecraft:item
 c36ec7df05d6275ae34f72b7ba654cb5188da343 data\kaleidoscopic\tags\item\can_craft_rock_slab.json
 76eb80d394f45ac84c222ed5bb1e6160b2c19abd data\kaleidoscopic\tags\item\can_craft_rock.json
 c34afcdf9f143dc54271b9edebb6a1d9e49065f6 data\kaleidoscopic\tags\item\can_craft_rock_stairs.json
-408d7b72b8838cadb44ee5d4b99895d6a9e9f730 data\kaleidoscopic\tags\item\can_craft_door.json
+94ec1a58acd8c1b9cd06c5cc36c405e204d49973 data\kaleidoscopic\tags\item\can_craft_door.json
 b595bc75bad3c454a9ccc15a5d8ddb2c176eed42 data\kaleidoscopic\tags\item\can_craft_rock_wall.json

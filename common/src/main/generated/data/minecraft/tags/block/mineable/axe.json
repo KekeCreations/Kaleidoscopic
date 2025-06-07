@@ -1,20 +1,36 @@
 {
   "values": [
     "kaleidoscopic:white_ladder",
+    "kaleidoscopic:white_door",
     "kaleidoscopic:orange_ladder",
+    "kaleidoscopic:orange_door",
     "kaleidoscopic:magenta_ladder",
+    "kaleidoscopic:magenta_door",
     "kaleidoscopic:light_blue_ladder",
+    "kaleidoscopic:light_blue_door",
     "kaleidoscopic:yellow_ladder",
+    "kaleidoscopic:yellow_door",
     "kaleidoscopic:lime_ladder",
+    "kaleidoscopic:lime_door",
     "kaleidoscopic:pink_ladder",
+    "kaleidoscopic:pink_door",
     "kaleidoscopic:gray_ladder",
+    "kaleidoscopic:gray_door",
     "kaleidoscopic:light_gray_ladder",
+    "kaleidoscopic:light_gray_door",
     "kaleidoscopic:cyan_ladder",
+    "kaleidoscopic:cyan_door",
     "kaleidoscopic:purple_ladder",
+    "kaleidoscopic:purple_door",
     "kaleidoscopic:blue_ladder",
+    "kaleidoscopic:blue_door",
     "kaleidoscopic:brown_ladder",
+    "kaleidoscopic:brown_door",
     "kaleidoscopic:green_ladder",
+    "kaleidoscopic:green_door",
     "kaleidoscopic:red_ladder",
-    "kaleidoscopic:black_ladder"
+    "kaleidoscopic:red_door",
+    "kaleidoscopic:black_ladder",
+    "kaleidoscopic:black_door"
   ]
 }
