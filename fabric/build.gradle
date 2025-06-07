@@ -14,6 +14,7 @@ dependencies {
     include implementation("blue.endless:jankson:${jankson_version}")
 
     modImplementation "curse.maven:artsandcrafts-1034791:6423022"
+    modImplementation "curse.maven:modmenu-308702:5810603"
 }
 
 loom {

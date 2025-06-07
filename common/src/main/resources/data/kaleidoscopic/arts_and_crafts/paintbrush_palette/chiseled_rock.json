@@ -1,0 +1,22 @@
+{
+  "blocks": "#kaleidoscopic:chiseled_rock",
+  "mappings": {
+    "arts_and_crafts:white_paintbrush": "kaleidoscopic:chiseled_white_rock",
+    "arts_and_crafts:light_gray_paintbrush": "kaleidoscopic:chiseled_light_gray_rock",
+    "arts_and_crafts:gray_paintbrush": "kaleidoscopic:chiseled_gray_rock",
+    "arts_and_crafts:black_paintbrush": "kaleidoscopic:chiseled_black_rock",
+    "arts_and_crafts:brown_paintbrush": "kaleidoscopic:chiseled_brown_rock",
+    "arts_and_crafts:red_paintbrush": "kaleidoscopic:chiseled_red_rock",
+    "arts_and_crafts:orange_paintbrush": "kaleidoscopic:chiseled_orange_rock",
+    "arts_and_crafts:yellow_paintbrush": "kaleidoscopic:chiseled_yellow_rock",
+    "arts_and_crafts:lime_paintbrush": "kaleidoscopic:chiseled_lime_rock",
+    "arts_and_crafts:green_paintbrush": "kaleidoscopic:chiseled_green_rock",
+    "arts_and_crafts:cyan_paintbrush": "kaleidoscopic:chiseled_cyan_rock",
+    "arts_and_crafts:light_blue_paintbrush": "kaleidoscopic:chiseled_light_blue_rock",
+    "arts_and_crafts:blue_paintbrush": "kaleidoscopic:chiseled_blue_rock",
+    "arts_and_crafts:purple_paintbrush": "kaleidoscopic:chiseled_purple_rock",
+    "arts_and_crafts:magenta_paintbrush": "kaleidoscopic:chiseled_magenta_rock",
+    "arts_and_crafts:pink_paintbrush": "kaleidoscopic:chiseled_pink_rock",
+    "arts_and_crafts:bleachdew_paintbrush": "kaleidoscopic:chiseled_bleached_rock"
+  }
+}

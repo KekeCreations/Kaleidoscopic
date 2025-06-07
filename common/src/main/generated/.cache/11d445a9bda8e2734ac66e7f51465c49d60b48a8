@@ -1,9 +1,10 @@
-// 1.21.1	2025-06-07T06:50:48.2515071	Kaleidoscopic/Tags for minecraft:block
+// 1.21.1	2025-06-07T07:08:16.3387882	Kaleidoscopic/Tags for minecraft:block
 f102f488bd3f3661d70c06f9f6992b64b48ba059 data\kaleidoscopic\tags\block\rock_brick_wall.json
 79bc414fcf0c8e2479736ed2cefcd09af073d2fe data\minecraft\tags\block\mineable\pickaxe.json
 223da18b48633e183f06a3d5bf849f1a6b67ac2e data\kaleidoscopic\tags\block\rock_slab.json
 74615e9a3c8d5317c978159ee4a36dc2be50ba42 data\minecraft\tags\block\climbable.json
 a2cfc63fa73869c42cc0972a777e93cf56681b0e data\kaleidoscopic\tags\block\rock_stairs.json
+a87890d4932d65f6b9d54b4ce41aa4906c30b808 data\minecraft\tags\block\walls.json
 d89f8d0e293c3299550ce8dc79028eddebc37f33 data\kaleidoscopic\tags\block\rock.json
 befea7a2a24e238573f9212f7e6806de4a5144e6 data\kaleidoscopic\tags\block\rock_brick_stairs.json
 57b317e5d21076b3cc5cc12dfd6cfb308ec4e4a2 data\kaleidoscopic\tags\block\rock_bricks.json

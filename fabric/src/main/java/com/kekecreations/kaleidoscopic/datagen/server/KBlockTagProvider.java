@@ -33,6 +33,7 @@ public class KBlockTagProvider extends FabricTagProvider.BlockTagProvider{
         ladders();
         doors();
         trapdoors();
+        walls();
     }
 
     private void pickaxeMineable() {
@@ -193,5 +194,18 @@ public class KBlockTagProvider extends FabricTagProvider.BlockTagProvider{
         }
         this.getOrCreateTagBuilder(KTags.BlockTags.DYED_TRAPDOORS)
                 .add(KBlocks.BLEACHED_TRAPDOOR.get());
+    }
+
+    private void walls() {
+        for (DyeColor colour : DyeColor.values()) {
+            this.getOrCreateTagBuilder(BlockTags.WALLS)
+                    .add(KBlocks.DYED_ROCK_WALLS.get(colour).get())
+                    .add(KBlocks.DYED_ROCK_BRICK_WALLS.get(colour).get())
+            ;
+        }
+        this.getOrCreateTagBuilder(BlockTags.WALLS)
+                .add(KBlocks.BLEACHED_ROCK_WALL.get())
+                .add(KBlocks.BLEACHED_ROCK_BRICK_WALL.get())
+        ;
     }
 }

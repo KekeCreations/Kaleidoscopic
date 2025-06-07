@@ -1,4 +1,4 @@
-// 1.21.1	2025-06-07T06:50:48.2535212	Kaleidoscopic/Block Loot Tables
+// 1.21.1	2025-06-07T07:08:16.3399088	Kaleidoscopic/Block Loot Tables
 30c393a191eb90734385263f06478b2d76443f58 data\kaleidoscopic\loot_table\blocks\cyan_rock_wall.json
 26004d164b47c0bb185fa0c5b2a4ff3714a58f07 data\kaleidoscopic\loot_table\blocks\lime_rock_brick_stairs.json
 3e19042c71a2bd9ffb2690edcfa14326c8d81321 data\kaleidoscopic\loot_table\blocks\purple_rock_brick_stairs.json
@@ -153,8 +153,8 @@ fc97449086776472f82b5e5905f17855cab007ba data\kaleidoscopic\loot_table\blocks\pi
 5bc1fafb98380567151d58d68bb413c5a3b1858b data\kaleidoscopic\loot_table\blocks\light_blue_rock_slab.json
 b254abd305f79f40e64ac5f208d1bd5a610a5bd3 data\kaleidoscopic\loot_table\blocks\green_rock_bricks.json
 d191a27727ae5b1ae9dad0c7fa897a636921572a data\kaleidoscopic\loot_table\blocks\purple_rock_bricks.json
-e861c496c9a142fdd94e140af8f3c0a35ec1e387 data\kaleidoscopic\loot_table\blocks\pink_rock_stairs.json
 6d4d4e1ac49656a88a8f370d99f4ac032e5ac9ea data\kaleidoscopic\loot_table\blocks\pink_rock_wall.json
+e861c496c9a142fdd94e140af8f3c0a35ec1e387 data\kaleidoscopic\loot_table\blocks\pink_rock_stairs.json
 5c0ace6f0ca315f888395633b27e8738f88b8044 data\kaleidoscopic\loot_table\blocks\blue_rock_brick_slab.json
 c08a67cb44c4f620e13ca9c6d59d76a7d915c3b3 data\kaleidoscopic\loot_table\blocks\red_rock_bricks.json
 259cf8e5e612e5f92a9f5f604cd9c2c0ebbb6c3f data\kaleidoscopic\loot_table\blocks\magenta_rock_brick_stairs.json
