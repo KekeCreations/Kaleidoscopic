@@ -29,4 +29,20 @@ public class FabricConfigHelper implements IConfigHelper {
         }
         return false;
     }
+
+    @Override
+    public boolean areDyedDoorsEnabled() {
+        if (FabricKaleidoscopic.getConfig() != null) {
+            return FabricKaleidoscopic.getConfig().areDyedDoorsEnabled();
+        }
+        return false;
+    }
+
+    @Override
+    public boolean areDyedTrapdoorsEnabled() {
+        if (FabricKaleidoscopic.getConfig() != null) {
+            return FabricKaleidoscopic.getConfig().areDyedTrapdoorsEnabled();
+        }
+        return false;
+    }
 }

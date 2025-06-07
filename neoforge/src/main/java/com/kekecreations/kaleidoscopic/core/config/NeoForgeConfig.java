@@ -10,6 +10,8 @@ public class NeoForgeConfig {
     public static final ModConfigSpec.BooleanValue IS_DYED_ROCK_VARIANTS_ENABLED;
 
     public static final ModConfigSpec.BooleanValue ARE_DYED_LADDERS_ENABLED;
+    public static final ModConfigSpec.BooleanValue ARE_DYED_DOORS_ENABLED;
+    public static final ModConfigSpec.BooleanValue ARE_DYED_TRAPDOORS_ENABLED;
 
 
     static {
@@ -30,6 +32,14 @@ public class NeoForgeConfig {
         ARE_DYED_LADDERS_ENABLED = BUILDER
                 .comment("Enables Dyed Ladders!")
                 .define("dyedLadders", true);
+
+        ARE_DYED_DOORS_ENABLED = BUILDER
+                .comment("Enables Dyed Doors!")
+                .define("dyedDoors", true);
+
+        ARE_DYED_TRAPDOORS_ENABLED = BUILDER
+                .comment("Enables Dyed Trapdoors!")
+                .define("dyedTrapdoors", true);
 
 
 

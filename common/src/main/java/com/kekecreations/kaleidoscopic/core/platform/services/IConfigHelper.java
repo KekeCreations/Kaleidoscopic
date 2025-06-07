@@ -7,4 +7,8 @@ public interface IConfigHelper {
     boolean isDyedRockVariantsEnabled();
 
     boolean areDyedLaddersEnabled();
+
+    boolean areDyedDoorsEnabled();
+
+    boolean areDyedTrapdoorsEnabled();
 }

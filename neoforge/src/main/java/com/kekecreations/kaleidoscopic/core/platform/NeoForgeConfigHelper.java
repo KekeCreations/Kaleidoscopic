@@ -29,4 +29,20 @@ public class NeoForgeConfigHelper implements IConfigHelper {
         }
         return NeoForgeConfig.ARE_DYED_LADDERS_ENABLED.get();
     }
+
+    @Override
+    public boolean areDyedDoorsEnabled() {
+        if (!NeoForgeConfig.SPEC.isLoaded()) {
+            return true;
+        }
+        return NeoForgeConfig.ARE_DYED_DOORS_ENABLED.get();
+    }
+
+    @Override
+    public boolean areDyedTrapdoorsEnabled() {
+        if (!NeoForgeConfig.SPEC.isLoaded()) {
+            return true;
+        }
+        return NeoForgeConfig.ARE_DYED_TRAPDOORS_ENABLED.get();
+    }
 }

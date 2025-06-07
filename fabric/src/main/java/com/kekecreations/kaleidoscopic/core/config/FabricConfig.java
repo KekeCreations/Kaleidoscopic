@@ -124,4 +124,18 @@ public class FabricConfig implements CustomPacketPayload {
     public boolean areDyedLaddersEnabled() {
         return areDyedLaddersEnabled;
     }
+
+    @Comment("Enables Dyed Doors!")
+    private boolean areDyedDoorsEnabled = true;
+
+    public boolean areDyedDoorsEnabled() {
+        return areDyedDoorsEnabled;
+    }
+
+    @Comment("Enables Dyed Trapdoors!")
+    private boolean areDyedTrapdoorsEnabled = true;
+
+    public boolean areDyedTrapdoorsEnabled() {
+        return areDyedTrapdoorsEnabled;
+    }
 }
