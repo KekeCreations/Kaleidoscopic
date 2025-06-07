@@ -34,7 +34,7 @@ dependencies {
      compileOnly group:'org.spongepowered', name:'mixin', version:'0.8.5'
      implementation group: 'com.google.code.findbugs', name: 'jsr305', version: '3.0.1'
 
-     implementation "curse.maven:jinxedlib-1203401:6619243"
+     implementation "curse.maven:jinxedlib-1203401:6627521"
 }
 
 publishing {

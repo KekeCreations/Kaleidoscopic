@@ -82,7 +82,7 @@ dependencies {
     implementation(annotationProcessor("io.github.llamalad7:mixinextras-common:${mixin_extras_version}"))
     implementation("io.github.llamalad7:mixinextras-forge:${mixin_extras_version}")
 
-    implementation fg.deobf("curse.maven:jinxedlib-1203401:6619243")
+    implementation fg.deobf("curse.maven:jinxedlib-1203401:6627521")
 }
 
 tasks.withType(JavaCompile).configureEach {

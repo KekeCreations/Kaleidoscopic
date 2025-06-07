@@ -1,6 +1,5 @@
 package com.kekecreations.kaleidoscopic;
 
-import com.kekecreations.jinxedlib.core.util.JinxedCreativeCategoryHelper;
 import com.kekecreations.kaleidoscopic.core.registry.KBlocks;
 import com.kekecreations.kaleidoscopic.core.registry.KTabs;
 import org.slf4j.Logger;
@@ -15,8 +14,6 @@ public class Kaleidoscopic {
 
     public static void init() {
         KBlocks.loadClass();
-        JinxedCreativeCategoryHelper.addVanillaDyesToColourOrder();
-        JinxedCreativeCategoryHelper.addVanillaDyesToColourOrderBackToFront();
         KTabs.register();
 
     }

@@ -1,9 +1,5 @@
 package com.kekecreations.kaleidoscopic.core.platform.services;
 
-import net.minecraft.world.item.CreativeModeTab;
-
-import java.util.function.Supplier;
-
 public interface IPlatformHelper {
 
     /**
@@ -37,6 +33,4 @@ public interface IPlatformHelper {
 
         return isDevelopmentEnvironment() ? "development" : "production";
     }
-
-    <T extends CreativeModeTab> Supplier<T> registerCreativeModeTab(String id, Supplier<T> tabSupplier);
 }

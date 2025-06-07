@@ -14,7 +14,7 @@ dependencies {
     modImplementation "net.fabricmc.fabric-api:fabric-api:${fabric_version}"
     implementation group: 'com.google.code.findbugs', name: 'jsr305', version: '3.0.1'
     include implementation("blue.endless:jankson:1.2.3")
-    modImplementation "curse.maven:jinxedlib-1203401:6619342"
+    modImplementation "curse.maven:jinxedlib-1203401:6627520"
     modImplementation "curse.maven:modmenu-308702:5162837"
     modImplementation "curse.maven:artsandcrafts-1034791:5992025"
     implementation project(":common")

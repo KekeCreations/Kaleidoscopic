@@ -3,14 +3,9 @@ package com.kekecreations.kaleidoscopic.core.registry;
 import com.kekecreations.jinxedlib.core.util.JinxedCreativeCategoryHelper;
 import com.kekecreations.jinxedlib.core.util.JinxedRegistryHelper;
 import com.kekecreations.kaleidoscopic.Kaleidoscopic;
-import com.kekecreations.kaleidoscopic.core.platform.Services;
-import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.DyeColor;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Items;
-import net.minecraft.world.level.block.Blocks;
 
 import java.util.function.Supplier;
 
@@ -18,8 +13,7 @@ public class KTabs {
 
     public static final Supplier<CreativeModeTab> CONFIG_TAB = registerCreativeModeTab("configurable_tab", () -> CreativeModeTab.builder(CreativeModeTab.Row.TOP, 0)
             .title(Component.translatable("tab." + Kaleidoscopic.MOD_ID + ".configurable_tab"))
-            //.icon(() -> KBlocks.DYED_ROCKS.get(DyeColor.BLUE).get().asItem().getDefaultInstance())
-            .icon(() -> new ItemStack(Items.STICK))
+            .icon(() -> KBlocks.DYED_ROCKS.get(DyeColor.BLUE).get().asItem().getDefaultInstance())
             .displayItems((params, pOutput) -> {
                 pOutput.accept(KBlocks.BLEACHED_DOOR.get());
                 for (DyeColor colour : JinxedCreativeCategoryHelper.colourOrder) {
@@ -59,7 +53,7 @@ public class KTabs {
     );
 
     private static <T extends CreativeModeTab> Supplier<T> registerCreativeModeTab(String name, Supplier<T> tabSupplier) {
-        return Services.PLATFORM.registerCreativeModeTab(name, tabSupplier);
+        return JinxedRegistryHelper.registerCreativeModeTab(Kaleidoscopic.MOD_ID, name, tabSupplier);
     }
 
     public static void register() {}
