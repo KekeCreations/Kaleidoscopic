@@ -28,5 +28,8 @@ public class FabricKaleidoscopicClient implements ClientModInitializer {
             BlockRenderLayerMap.INSTANCE.putBlock(KBlocks.DYED_DOORS.get(colour).get(), RenderType.cutout());
             BlockRenderLayerMap.INSTANCE.putBlock(KBlocks.DYED_TRAPDOORS.get(colour).get(), RenderType.cutout());
         }
+        BlockRenderLayerMap.INSTANCE.putBlock(KBlocks.BLEACHED_LADDER.get(), RenderType.cutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(KBlocks.BLEACHED_DOOR.get(), RenderType.cutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(KBlocks.BLEACHED_TRAPDOOR.get(), RenderType.cutout());
     }
 }

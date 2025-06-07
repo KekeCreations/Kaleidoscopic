@@ -15,7 +15,7 @@ neoForge {
         mappingsVersion = parchment_version
     }
     dependencies {
-        implementation "curse.maven:jinxedlib-1203401:6269067"
+        implementation "curse.maven:jinxedlib-1203401:6332450"
     }
     runs {
         configureEach {

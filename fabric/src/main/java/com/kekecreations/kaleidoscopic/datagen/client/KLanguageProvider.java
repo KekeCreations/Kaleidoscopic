@@ -34,6 +34,20 @@ public class KLanguageProvider extends FabricLanguageProvider {
             builder.add(KBlocks.DYED_DOORS.get(colour).get(), stringColour + " Door");
             builder.add(KBlocks.DYED_TRAPDOORS.get(colour).get(), stringColour + " Trapdoor");
         }
+
+        builder.add(KBlocks.CHISELED_BLEACHED_ROCK.get(), "Chiseled Bleached Rock");
+        builder.add(KBlocks.BLEACHED_ROCK.get(), "Bleached Rock");
+        builder.add(KBlocks.BLEACHED_ROCK_STAIRS.get(), "Bleached Rock Stairs");
+        builder.add(KBlocks.BLEACHED_ROCK_SLAB.get(), "Bleached Rock Slab");
+        builder.add(KBlocks.BLEACHED_ROCK_WALL.get(), "Bleached Rock Wall");
+        builder.add(KBlocks.BLEACHED_ROCK_BRICKS.get(), "Bleached Rock Bricks");
+        builder.add(KBlocks.BLEACHED_ROCK_BRICK_STAIRS.get(), "Bleached Rock Brick Stairs");
+        builder.add(KBlocks.BLEACHED_ROCK_BRICK_SLAB.get(), "Bleached Rock Brick Slab");
+        builder.add(KBlocks.BLEACHED_ROCK_BRICK_WALL.get(), "Bleached Rock Brick Wall");
+        builder.add(KBlocks.BLEACHED_LADDER.get(), "Bleached Ladder");
+        builder.add(KBlocks.BLEACHED_DOOR.get(), "Bleached Door");
+        builder.add(KBlocks.BLEACHED_TRAPDOOR.get(), "Bleached Trapdoor");
+
         builder.add("tab.kaleidoscopic.configurable_tab", "Kaleidoscopic");
 
     }

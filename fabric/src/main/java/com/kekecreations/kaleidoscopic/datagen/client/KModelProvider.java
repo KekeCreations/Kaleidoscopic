@@ -41,6 +41,23 @@ public class KModelProvider extends FabricModelProvider {
             generator.createDoor(KBlocks.DYED_DOORS.get(colour).get());
             generator.createOrientableTrapdoor(KBlocks.DYED_TRAPDOORS.get(colour).get());
         }
+
+        //compat
+        generator.createTrivialCube(KBlocks.CHISELED_BLEACHED_ROCK.get());
+        BlockModelGenerators.BlockFamilyProvider rockBlock = generator.family(KBlocks.BLEACHED_ROCK.get());
+        rockBlock.stairs(KBlocks.BLEACHED_ROCK_STAIRS.get());
+        rockBlock.slab(KBlocks.BLEACHED_ROCK_SLAB.get());
+        rockBlock.wall(KBlocks.BLEACHED_ROCK_WALL.get());
+
+        BlockModelGenerators.BlockFamilyProvider rockBlock2 = generator.family(KBlocks.BLEACHED_ROCK_BRICKS.get());
+        rockBlock2.stairs(KBlocks.BLEACHED_ROCK_BRICK_STAIRS.get());
+        rockBlock2.slab(KBlocks.BLEACHED_ROCK_BRICK_SLAB.get());
+        rockBlock2.wall(KBlocks.BLEACHED_ROCK_BRICK_WALL.get());
+
+        createDyedLadder(KBlocks.BLEACHED_LADDER.get(), generator);
+        generator.createSimpleFlatItemModel(KBlocks.BLEACHED_LADDER.get());
+        generator.createDoor(KBlocks.BLEACHED_DOOR.get());
+        generator.createOrientableTrapdoor(KBlocks.BLEACHED_TRAPDOOR.get());
     }
 
     @Override

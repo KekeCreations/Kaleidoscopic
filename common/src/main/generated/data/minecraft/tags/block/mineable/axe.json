@@ -47,6 +47,9 @@
     "kaleidoscopic:red_trapdoor",
     "kaleidoscopic:black_ladder",
     "kaleidoscopic:black_door",
-    "kaleidoscopic:black_trapdoor"
+    "kaleidoscopic:black_trapdoor",
+    "kaleidoscopic:bleached_ladder",
+    "kaleidoscopic:bleached_door",
+    "kaleidoscopic:bleached_trapdoor"
   ]
 }

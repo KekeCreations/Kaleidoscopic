@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "kaleidoscopic:bleached_rock_bricks"
+  },
+  "result": {
+    "count": 1,
+    "id": "kaleidoscopic:bleached_rock_brick_wall"
+  }
+}

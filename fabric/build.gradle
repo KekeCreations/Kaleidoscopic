@@ -10,8 +10,10 @@ dependencies {
     }
     modImplementation "net.fabricmc:fabric-loader:${fabric_loader_version}"
     modImplementation "net.fabricmc.fabric-api:fabric-api:${fabric_version}"
-    modImplementation "curse.maven:jinxedlib-1203401:6268910"
+    modImplementation "curse.maven:jinxedlib-1203401:6332453"
     include implementation("blue.endless:jankson:${jankson_version}")
+
+    modImplementation "curse.maven:artsandcrafts-1034791:6423022"
 }
 
 loom {

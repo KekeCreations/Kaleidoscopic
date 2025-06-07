@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "K": {
+      "tag": "kaleidoscopic:can_craft_rock_wall"
+    },
+    "X": {
+      "item": "arts_and_crafts:bleachdew"
+    }
+  },
+  "pattern": [
+    "XK",
+    "KX"
+  ],
+  "result": {
+    "count": 2,
+    "id": "kaleidoscopic:bleached_rock_wall"
+  }
+}

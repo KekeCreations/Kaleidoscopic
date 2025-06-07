@@ -1,5 +1,6 @@
 package com.kekecreations.kaleidoscopic.datagen.server;
 
+import com.kekecreations.arts_and_crafts.core.registry.ACItems;
 import com.kekecreations.kaleidoscopic.core.init.KTags;
 import com.kekecreations.kaleidoscopic.core.registry.KBlocks;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
@@ -8,10 +9,7 @@ import net.minecraft.core.HolderLookup;
 import net.minecraft.data.recipes.RecipeCategory;
 import net.minecraft.data.recipes.RecipeOutput;
 import net.minecraft.data.recipes.ShapedRecipeBuilder;
-import net.minecraft.world.item.DyeColor;
-import net.minecraft.world.item.DyeItem;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Items;
+import net.minecraft.world.item.*;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.block.Block;
 
@@ -58,12 +56,53 @@ public class KRecipeProvider  extends FabricRecipeProvider {
             dyeSquareRecipe(Ingredient.of(KTags.ItemTags.CAN_CRAFT_DOOR), dyeColour, KBlocks.DYED_DOORS.get(dyeColour).get(), recipeOutput);
             //Dyed Trapdoors
             dyeSquareRecipe(Ingredient.of(KTags.ItemTags.CAN_CRAFT_TRAPDOOR), dyeColour, KBlocks.DYED_TRAPDOORS.get(dyeColour).get(), recipeOutput);
-
         }
+
+        //COMPAT
+        bleachSquareRecipe(Ingredient.of(new ItemStack(Items.LADDER)), ACItems.BLEACHDEW.get(), KBlocks.BLEACHED_LADDER.get(), recipeOutput);
+        //Dyed Doors
+        bleachSquareRecipe(Ingredient.of(KTags.ItemTags.CAN_CRAFT_DOOR), ACItems.BLEACHDEW.get(), KBlocks.BLEACHED_DOOR.get(), recipeOutput);
+        //Dyed Trapdoors
+        bleachSquareRecipe(Ingredient.of(KTags.ItemTags.CAN_CRAFT_TRAPDOOR), ACItems.BLEACHDEW.get(), KBlocks.BLEACHED_TRAPDOOR.get(), recipeOutput);
+
+        //Dyed Rocks
+        chiselRecipe(KBlocks.BLEACHED_ROCK_SLAB.get(), KBlocks.CHISELED_BLEACHED_ROCK.get(), recipeOutput);
+        stonecutterResultFromBase(recipeOutput, RecipeCategory.BUILDING_BLOCKS, KBlocks.CHISELED_BLEACHED_ROCK.get(), KBlocks.BLEACHED_ROCK.get());
+        bleachSquareRecipe(Ingredient.of(KTags.ItemTags.CAN_CRAFT_ROCK), ACItems.BLEACHDEW.get(), KBlocks.BLEACHED_ROCK.get(), recipeOutput);
+        bleachSquareRecipe(Ingredient.of(KTags.ItemTags.CAN_CRAFT_ROCK_STAIRS), ACItems.BLEACHDEW.get(), KBlocks.BLEACHED_ROCK_STAIRS.get(), recipeOutput);
+        stonecutterResultFromBase(recipeOutput, RecipeCategory.BUILDING_BLOCKS, KBlocks.BLEACHED_ROCK_STAIRS.get(), KBlocks.BLEACHED_ROCK.get());
+        bleachSquareRecipe(Ingredient.of(KTags.ItemTags.CAN_CRAFT_ROCK_SLAB), ACItems.BLEACHDEW.get(), KBlocks.BLEACHED_ROCK_SLAB.get(), recipeOutput);
+        stonecutterResultFromBase(recipeOutput, RecipeCategory.BUILDING_BLOCKS, KBlocks.BLEACHED_ROCK_SLAB.get(), KBlocks.BLEACHED_ROCK.get());
+        bleachSquareRecipe(Ingredient.of(KTags.ItemTags.CAN_CRAFT_ROCK_WALL), ACItems.BLEACHDEW.get(), KBlocks.BLEACHED_ROCK_WALL.get(), recipeOutput);
+        stonecutterResultFromBase(recipeOutput, RecipeCategory.BUILDING_BLOCKS, KBlocks.BLEACHED_ROCK_WALL.get(), KBlocks.BLEACHED_ROCK.get());
+        stairRecipe(KBlocks.BLEACHED_ROCK.get(), KBlocks.BLEACHED_ROCK_STAIRS.get(), recipeOutput);
+        slabRecipe(KBlocks.BLEACHED_ROCK.get(), KBlocks.BLEACHED_ROCK_SLAB.get(), recipeOutput);
+        wallRecipe(KBlocks.BLEACHED_ROCK.get(), KBlocks.BLEACHED_ROCK_WALL.get(), recipeOutput);
+        //Dyed Rock Bricks
+        typeRecipe(KBlocks.BLEACHED_ROCK.get(), KBlocks.BLEACHED_ROCK_BRICKS.get(), recipeOutput);
+        stonecutterResultFromBase(recipeOutput, RecipeCategory.BUILDING_BLOCKS, KBlocks.BLEACHED_ROCK_BRICKS.get(), KBlocks.BLEACHED_ROCK.get());
+        stairRecipe(KBlocks.BLEACHED_ROCK_BRICKS.get(), KBlocks.BLEACHED_ROCK_BRICK_STAIRS.get(), recipeOutput);
+        stonecutterResultFromBase(recipeOutput, RecipeCategory.BUILDING_BLOCKS, KBlocks.BLEACHED_ROCK_BRICK_STAIRS.get(), KBlocks.BLEACHED_ROCK.get());
+        stonecutterResultFromBase(recipeOutput, RecipeCategory.BUILDING_BLOCKS, KBlocks.BLEACHED_ROCK_BRICK_STAIRS.get(), KBlocks.BLEACHED_ROCK_BRICKS.get());
+        slabRecipe(KBlocks.BLEACHED_ROCK_BRICKS.get(), KBlocks.BLEACHED_ROCK_BRICK_SLAB.get(), recipeOutput);
+        stonecutterResultFromBase(recipeOutput, RecipeCategory.BUILDING_BLOCKS, KBlocks.BLEACHED_ROCK_BRICK_SLAB.get(), KBlocks.BLEACHED_ROCK.get());
+        stonecutterResultFromBase(recipeOutput, RecipeCategory.BUILDING_BLOCKS, KBlocks.BLEACHED_ROCK_BRICK_SLAB.get(), KBlocks.BLEACHED_ROCK_BRICKS.get());
+        wallRecipe(KBlocks.BLEACHED_ROCK_BRICKS.get(), KBlocks.BLEACHED_ROCK_BRICK_WALL.get(), recipeOutput);
+        stonecutterResultFromBase(recipeOutput, RecipeCategory.BUILDING_BLOCKS, KBlocks.BLEACHED_ROCK_BRICK_WALL.get(), KBlocks.BLEACHED_ROCK.get());
+        stonecutterResultFromBase(recipeOutput, RecipeCategory.BUILDING_BLOCKS, KBlocks.BLEACHED_ROCK_BRICK_WALL.get(), KBlocks.BLEACHED_ROCK_BRICKS.get());
 
     }
 
 
+    protected static void bleachSquareRecipe(Ingredient craftingBlock, Item dyeColour, Block resultBlock, RecipeOutput output) {
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, resultBlock ,2)
+                .pattern("XK")
+                .pattern("KX")
+                .define('K', craftingBlock)
+                .define('X', dyeColour)
+                .unlockedBy(getItemName(resultBlock), has(dyeColour))
+                .save(output, getItemName(resultBlock) + "_type");
+    }
 
     protected static void dyeSquareRecipe(Ingredient craftingBlock, DyeColor dyeColour, Block resultBlock, RecipeOutput output) {
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, resultBlock ,2)

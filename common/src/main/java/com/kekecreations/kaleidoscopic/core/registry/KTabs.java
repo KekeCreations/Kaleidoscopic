@@ -16,15 +16,27 @@ public class KTabs {
             .title(Component.translatable("tab." + Kaleidoscopic.MOD_ID + ".configurable_tab"))
             .icon(() -> KBlocks.DYED_ROCKS.get(DyeColor.BLUE).get().asItem().getDefaultInstance())
             .displayItems((params, pOutput) -> {
+                pOutput.accept(KBlocks.BLEACHED_DOOR.get());
                 for (DyeColor colour : JinxedCreativeCategoryUtils.colourOrder) {
                     pOutput.accept(KBlocks.DYED_DOORS.get(colour).get());
                 }
+                pOutput.accept(KBlocks.BLEACHED_TRAPDOOR.get());
                 for (DyeColor colour : JinxedCreativeCategoryUtils.colourOrder) {
                     pOutput.accept(KBlocks.DYED_TRAPDOORS.get(colour).get());
                 }
+                pOutput.accept(KBlocks.BLEACHED_LADDER.get());
                 for (DyeColor colour : JinxedCreativeCategoryUtils.colourOrder) {
                     pOutput.accept(KBlocks.DYED_LADDERS.get(colour).get());
                 }
+                pOutput.accept(KBlocks.BLEACHED_ROCK.get());
+                pOutput.accept(KBlocks.BLEACHED_ROCK_BRICKS.get());
+                pOutput.accept(KBlocks.CHISELED_BLEACHED_ROCK.get());
+                pOutput.accept(KBlocks.BLEACHED_ROCK_STAIRS.get());
+                pOutput.accept(KBlocks.BLEACHED_ROCK_BRICK_STAIRS.get());
+                pOutput.accept(KBlocks.BLEACHED_ROCK_SLAB.get());
+                pOutput.accept(KBlocks.BLEACHED_ROCK_BRICK_SLAB.get());
+                pOutput.accept(KBlocks.BLEACHED_ROCK_WALL.get());
+                pOutput.accept(KBlocks.BLEACHED_ROCK_BRICK_WALL.get());
                 for (DyeColor colour : JinxedCreativeCategoryUtils.colourOrder) {
                     pOutput.accept(KBlocks.DYED_ROCKS.get(colour).get());
                     pOutput.accept(KBlocks.DYED_ROCK_BRICKS.get(colour).get());

@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_bleached_rock": {
+      "conditions": {
+        "items": [
+          {
+            "items": "kaleidoscopic:bleached_rock"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:bleached_rock_brick_stairs_from_bleached_rock_stonecutting"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_bleached_rock"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:bleached_rock_brick_stairs_from_bleached_rock_stonecutting"
+    ]
+  }
+}
