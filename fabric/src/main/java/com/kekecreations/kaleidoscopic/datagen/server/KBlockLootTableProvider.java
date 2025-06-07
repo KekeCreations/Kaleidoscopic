@@ -21,6 +21,7 @@ public class KBlockLootTableProvider extends FabricBlockLootTableProvider {
         dyedRockBricks();
         ladders();
         doors();
+        trapdoors();
     }
 
     private void dyedRocks() {
@@ -51,6 +52,12 @@ public class KBlockLootTableProvider extends FabricBlockLootTableProvider {
     private void doors() {
         for (DyeColor colour : DyeColor.values()) {
             add(KBlocks.DYED_DOORS.get(colour).get(), createDoorTable(KBlocks.DYED_DOORS.get(colour).get()));
+        }
+    }
+
+    private void trapdoors() {
+        for (DyeColor colour : DyeColor.values()) {
+            dropSelf(KBlocks.DYED_TRAPDOORS.get(colour).get());
         }
     }
 }

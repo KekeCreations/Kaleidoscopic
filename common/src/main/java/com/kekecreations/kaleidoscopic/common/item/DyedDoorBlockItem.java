@@ -12,6 +12,6 @@ public class DyedDoorBlockItem extends BlockItem {
 
     @Override
     public boolean isEnabled(FeatureFlagSet enabledFeatures) {
-        return Services.CONFIG.isDyedRockEnabled();
+        return Services.CONFIG.areDyedDoorsEnabled();
     }
 }
