@@ -1,0 +1,33 @@
+package com.kekecreations.kaleidoscopic.client;
+
+import com.kekecreations.kaleidoscopic.FabricKaleidoscopic;
+import com.kekecreations.kaleidoscopic.core.config.FabricConfig;
+import net.fabricmc.api.ClientModInitializer;
+import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
+import net.fabricmc.fabric.api.client.networking.v1.ClientPlayNetworking;
+import net.minecraft.client.renderer.RenderType;
+import net.minecraft.world.item.DyeColor;
+
+public class FabricKaleidoscopicClient implements ClientModInitializer {
+
+    @Override
+    public void onInitializeClient() {
+        registerBlockLayers();
+
+
+        ClientPlayNetworking.registerGlobalReceiver(FabricKaleidoscopic.SYNC_CONFIG_PACKET, (client, handler, buf, responseSender) -> {
+            FabricKaleidoscopic.setConfig(FabricConfig.readFromServer(buf));
+        });
+    }
+
+    public static void registerBlockLayers() {
+        for (DyeColor colour : DyeColor.values()) {
+            BlockRenderLayerMap.INSTANCE.putBlock(KBlocks.DYED_LADDERS.get(colour).get(), RenderType.cutout());
+            BlockRenderLayerMap.INSTANCE.putBlock(KBlocks.DYED_DOORS.get(colour).get(), RenderType.cutout());
+            BlockRenderLayerMap.INSTANCE.putBlock(KBlocks.DYED_TRAPDOORS.get(colour).get(), RenderType.cutout());
+        }
+        BlockRenderLayerMap.INSTANCE.putBlock(KBlocks.BLEACHED_LADDER.get(), RenderType.cutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(KBlocks.BLEACHED_DOOR.get(), RenderType.cutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(KBlocks.BLEACHED_TRAPDOOR.get(), RenderType.cutout());
+    }
+}
