@@ -16,6 +16,12 @@
     "entrypoints": {
         "main": [
             "com.kekecreations.kaleidoscopic.FabricKaleidoscopic"
+        ],
+        "client": [
+            "com.kekecreations.kaleidoscopic.client.FabricKaleidoscopicClient"
+        ],
+        "fabric-datagen": [
+            "com.kekecreations.kaleidoscopic.datagen.KDataGenerator"
         ]
     },
     "mixins": [

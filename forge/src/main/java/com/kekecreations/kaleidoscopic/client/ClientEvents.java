@@ -1,6 +1,7 @@
 package com.kekecreations.kaleidoscopic.client;
 
 import com.kekecreations.kaleidoscopic.Kaleidoscopic;
+import com.kekecreations.kaleidoscopic.core.registry.KBlocks;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.world.item.DyeColor;
@@ -24,5 +25,8 @@ public class ClientEvents {
             ItemBlockRenderTypes.setRenderLayer(KBlocks.DYED_DOORS.get(colour).get(), RenderType.cutout());
             ItemBlockRenderTypes.setRenderLayer(KBlocks.DYED_TRAPDOORS.get(colour).get(), RenderType.cutout());
         }
+        ItemBlockRenderTypes.setRenderLayer(KBlocks.BLEACHED_LADDER.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(KBlocks.BLEACHED_DOOR.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(KBlocks.BLEACHED_TRAPDOOR.get(), RenderType.cutout());
     }
 }

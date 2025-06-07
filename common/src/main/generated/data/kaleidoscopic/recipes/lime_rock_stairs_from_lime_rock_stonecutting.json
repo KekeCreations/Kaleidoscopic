@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "kaleidoscopic:lime_rock"
+  },
+  "result": "kaleidoscopic:lime_rock_stairs"
+}

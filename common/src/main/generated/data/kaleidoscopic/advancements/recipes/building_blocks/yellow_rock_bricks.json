@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "kaleidoscopic:yellow_rock_bricks"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "yellow_rock": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "kaleidoscopic:yellow_rock"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "yellow_rock",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "kaleidoscopic:yellow_rock_bricks"
+    ]
+  },
+  "sends_telemetry_event": false
+}

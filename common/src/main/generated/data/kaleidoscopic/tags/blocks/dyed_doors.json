@@ -1,0 +1,22 @@
+{
+  "replace": false,
+  "values": [
+    "kaleidoscopic:white_door",
+    "kaleidoscopic:orange_door",
+    "kaleidoscopic:magenta_door",
+    "kaleidoscopic:light_blue_door",
+    "kaleidoscopic:yellow_door",
+    "kaleidoscopic:lime_door",
+    "kaleidoscopic:pink_door",
+    "kaleidoscopic:gray_door",
+    "kaleidoscopic:light_gray_door",
+    "kaleidoscopic:cyan_door",
+    "kaleidoscopic:purple_door",
+    "kaleidoscopic:blue_door",
+    "kaleidoscopic:brown_door",
+    "kaleidoscopic:green_door",
+    "kaleidoscopic:red_door",
+    "kaleidoscopic:black_door",
+    "kaleidoscopic:bleached_door"
+  ]
+}

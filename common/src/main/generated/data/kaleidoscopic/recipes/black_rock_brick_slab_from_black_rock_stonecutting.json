@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "kaleidoscopic:black_rock"
+  },
+  "result": "kaleidoscopic:black_rock_brick_slab"
+}

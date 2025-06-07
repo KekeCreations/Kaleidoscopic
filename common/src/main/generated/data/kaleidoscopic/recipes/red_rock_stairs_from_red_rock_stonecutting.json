@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "kaleidoscopic:red_rock"
+  },
+  "result": "kaleidoscopic:red_rock_stairs"
+}

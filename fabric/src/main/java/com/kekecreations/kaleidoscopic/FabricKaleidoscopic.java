@@ -27,7 +27,6 @@ public class FabricKaleidoscopic implements ModInitializer {
     @Override
     public void onInitialize() {
         config();
-
         Kaleidoscopic.init();
     }
 

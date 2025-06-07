@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "kaleidoscopic:light_blue_rock_brick_slab"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "light_blue_rock_bricks": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "kaleidoscopic:light_blue_rock_bricks"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "light_blue_rock_bricks",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "kaleidoscopic:light_blue_rock_brick_slab"
+    ]
+  },
+  "sends_telemetry_event": false
+}

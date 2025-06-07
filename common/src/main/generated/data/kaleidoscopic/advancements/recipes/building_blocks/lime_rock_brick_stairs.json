@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "kaleidoscopic:lime_rock_brick_stairs"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "lime_rock_bricks": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "kaleidoscopic:lime_rock_bricks"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "lime_rock_bricks",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "kaleidoscopic:lime_rock_brick_stairs"
+    ]
+  },
+  "sends_telemetry_event": false
+}

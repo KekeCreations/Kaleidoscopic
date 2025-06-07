@@ -13,11 +13,11 @@ dependencies {
     modImplementation "net.fabricmc:fabric-loader:${fabric_loader_version}"
     modImplementation "net.fabricmc.fabric-api:fabric-api:${fabric_version}"
     implementation group: 'com.google.code.findbugs', name: 'jsr305', version: '3.0.1'
-    implementation project(":common")
-
     include implementation("blue.endless:jankson:1.2.3")
     modImplementation "curse.maven:jinxedlib-1203401:6619342"
     modImplementation "curse.maven:modmenu-308702:5162837"
+    modImplementation "curse.maven:artsandcrafts-1034791:5992025"
+    implementation project(":common")
 }
 
 loom {
@@ -39,6 +39,15 @@ loom {
             setConfigName("Fabric Server")
             ideConfigGenerated(true)
             runDir("run")
+        }
+        datagen {
+            inherit client
+            name "Data Generation"
+            vmArg "-Dfabric-api.datagen"
+            vmArg "-Dfabric-api.datagen.output-dir=${file("../common/src/main/generated/")}"
+            vmArg "-Dfabric-api.datagen.modid=kaleidoscopic"
+
+            runDir "build/datagen"
         }
     }
 }

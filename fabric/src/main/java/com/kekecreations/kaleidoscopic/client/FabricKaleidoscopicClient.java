@@ -2,6 +2,7 @@ package com.kekecreations.kaleidoscopic.client;
 
 import com.kekecreations.kaleidoscopic.FabricKaleidoscopic;
 import com.kekecreations.kaleidoscopic.core.config.FabricConfig;
+import com.kekecreations.kaleidoscopic.core.registry.KBlocks;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.client.networking.v1.ClientPlayNetworking;

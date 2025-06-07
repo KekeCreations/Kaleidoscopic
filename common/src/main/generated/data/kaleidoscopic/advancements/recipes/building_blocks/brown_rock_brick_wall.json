@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "brown_rock_bricks": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "kaleidoscopic:brown_rock_bricks"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "kaleidoscopic:brown_rock_brick_wall"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "brown_rock_bricks",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "kaleidoscopic:brown_rock_brick_wall"
+    ]
+  },
+  "sends_telemetry_event": false
+}

@@ -1,0 +1,22 @@
+{
+  "replace": false,
+  "values": [
+    "kaleidoscopic:white_rock_bricks",
+    "kaleidoscopic:orange_rock_bricks",
+    "kaleidoscopic:magenta_rock_bricks",
+    "kaleidoscopic:light_blue_rock_bricks",
+    "kaleidoscopic:yellow_rock_bricks",
+    "kaleidoscopic:lime_rock_bricks",
+    "kaleidoscopic:pink_rock_bricks",
+    "kaleidoscopic:gray_rock_bricks",
+    "kaleidoscopic:light_gray_rock_bricks",
+    "kaleidoscopic:cyan_rock_bricks",
+    "kaleidoscopic:purple_rock_bricks",
+    "kaleidoscopic:blue_rock_bricks",
+    "kaleidoscopic:brown_rock_bricks",
+    "kaleidoscopic:green_rock_bricks",
+    "kaleidoscopic:red_rock_bricks",
+    "kaleidoscopic:black_rock_bricks",
+    "kaleidoscopic:bleached_rock_bricks"
+  ]
+}

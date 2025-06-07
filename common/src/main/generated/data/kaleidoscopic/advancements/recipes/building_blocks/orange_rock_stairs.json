@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "kaleidoscopic:orange_rock_stairs"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "orange_rock": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "kaleidoscopic:orange_rock"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "orange_rock",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "kaleidoscopic:orange_rock_stairs"
+    ]
+  },
+  "sends_telemetry_event": false
+}

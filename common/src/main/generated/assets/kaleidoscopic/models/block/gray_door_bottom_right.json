@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/door_bottom_right",
+  "textures": {
+    "bottom": "kaleidoscopic:block/gray_door_bottom",
+    "top": "kaleidoscopic:block/gray_door_top"
+  }
+}

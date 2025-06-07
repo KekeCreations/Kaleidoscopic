@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "kaleidoscopic:chiseled_orange_rock"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "orange_rock_slab": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "kaleidoscopic:orange_rock_slab"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "orange_rock_slab",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "kaleidoscopic:chiseled_orange_rock"
+    ]
+  },
+  "sends_telemetry_event": false
+}

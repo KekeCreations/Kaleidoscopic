@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "kaleidoscopic:magenta_rock"
+  },
+  "result": "kaleidoscopic:magenta_rock_wall"
+}

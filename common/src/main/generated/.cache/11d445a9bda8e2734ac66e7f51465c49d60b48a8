@@ -1,0 +1,17 @@
+// 1.20.1	2025-06-07T22:29:08.6281931	Kaleidoscopic/Tags for minecraft:block
+dfe524e5acf6cc5f6642f12b0d1d5ec5ebadd7c8 data\minecraft\tags\blocks\walls.json
+54a6724c32ac105946c20c91c435e38d247b80ed data\kaleidoscopic\tags\blocks\dyed_ladders.json
+d6a54d3375207d397b9afc91c8bfe5c81db87feb data\minecraft\tags\blocks\mineable\axe.json
+0eb5f83204dc1bda71a5a17b7c21c07728c34b71 data\kaleidoscopic\tags\blocks\chiseled_rock.json
+54a6724c32ac105946c20c91c435e38d247b80ed data\minecraft\tags\blocks\climbable.json
+9ca6559968d34e89b832a078ff211f40ef22bf07 data\kaleidoscopic\tags\blocks\rock_bricks.json
+21c6591497b914df5a55c2764b7fec77dcf181db data\kaleidoscopic\tags\blocks\rock_brick_stairs.json
+5f6e1f8bc9aaf7f538635ab9e324f54cc75e6f0e data\kaleidoscopic\tags\blocks\rock_brick_slab.json
+fa2e7229769ae33e4b29be984fccdcc99b0ab243 data\kaleidoscopic\tags\blocks\rock.json
+69f249dde1c2bedf607163fed136f8e5e1d6a8fe data\kaleidoscopic\tags\blocks\rock_slab.json
+c3d4e5ba378e1ee0c7713f4a9e850775f075f970 data\kaleidoscopic\tags\blocks\rock_stairs.json
+226fd9098e145aa42190d2efd029b51cf1f83293 data\kaleidoscopic\tags\blocks\dyed_trapdoors.json
+95b31032a71e6c2a93e43bc24574f28616d4c39a data\minecraft\tags\blocks\mineable\pickaxe.json
+c1a4b1448adde1c9c4616e330f424962cc6d30e9 data\kaleidoscopic\tags\blocks\rock_wall.json
+5aa7638745d4bfedf391b5e37fc5b89bdf3092d1 data\kaleidoscopic\tags\blocks\dyed_doors.json
+5f4596b62deb7e29594ff37d40be245130ae80f9 data\kaleidoscopic\tags\blocks\rock_brick_wall.json

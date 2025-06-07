@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "kaleidoscopic:orange_rock"
+  },
+  "result": "kaleidoscopic:orange_rock_bricks"
+}

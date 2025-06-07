@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "kaleidoscopic:magenta_rock_stairs"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "magenta_rock": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "kaleidoscopic:magenta_rock"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "magenta_rock",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "kaleidoscopic:magenta_rock_stairs"
+    ]
+  },
+  "sends_telemetry_event": false
+}

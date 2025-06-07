@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "K": {
+      "item": "minecraft:ladder"
+    },
+    "X": {
+      "item": "arts_and_crafts:bleachdew"
+    }
+  },
+  "pattern": [
+    "XK",
+    "KX"
+  ],
+  "result": {
+    "count": 2,
+    "item": "kaleidoscopic:bleached_ladder"
+  },
+  "show_notification": true
+}
