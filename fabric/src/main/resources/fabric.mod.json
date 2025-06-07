@@ -16,12 +16,6 @@
     "entrypoints": {
         "main": [
             "com.kekecreations.kaleidoscopic.FabricKaleidoscopic"
-        ],
-        "fabric-datagen": [
-            "com.kekecreations.kaleidoscopic.datagen.KDataGenerator"
-        ],
-        "client" : [
-            "com.kekecreations.kaleidoscopic.client.FabricKaleidoscopicClient"
         ]
     },
     "mixins": [
@@ -29,11 +23,11 @@
         "${mod_id}.fabric.mixins.json"
     ],
     "depends": {
-        "fabricloader": ">=${fabric_loader_version}",
-        "fabric-api": "*",
+        "fabricloader": ">=0.14",
+        "fabric": "*",
         "minecraft": "${minecraft_version}",
-        "java": ">=${java_version}",
-        "jinxedlib": ">=1.0.3"
+        "java": ">=17",
+        "jinxedlib": ">=1.0.0"
     },
     "suggests": {
     }
