@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_sangria_rock": {
+      "conditions": {
+        "items": [
+          {
+            "items": "kaleidoscopic:sangria_rock"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:chiseled_sangria_rock_from_sangria_rock_stonecutting"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_sangria_rock"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:chiseled_sangria_rock_from_sangria_rock_stonecutting"
+    ]
+  }
+}

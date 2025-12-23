@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/door_top_left_open",
+  "textures": {
+    "bottom": "kaleidoscopic:block/sky_door_bottom",
+    "top": "kaleidoscopic:block/sky_door_top"
+  }
+}

@@ -13,8 +13,11 @@ dependencies {
     modImplementation "curse.maven:jinxedlib-1203401:6332453"
     include implementation("blue.endless:jankson:${jankson_version}")
 
-    modImplementation "curse.maven:artsandcrafts-1034791:6423022"
+    modImplementation "curse.maven:artsandcrafts-1034791:7370668"
     modImplementation "curse.maven:modmenu-308702:5810603"
+
+    modImplementation files("fabric-delicate_dyes-1.21.1-2.0.0.jar")
+    modImplementation files("fabric-runiclib-1.21.1-4.3.9.jar")
 }
 
 loom {

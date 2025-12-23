@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "lit=false": {
+      "model": "kaleidoscopic:block/sangria_lamp_off"
+    },
+    "lit=true": {
+      "model": "kaleidoscopic:block/sangria_lamp_on"
+    }
+  }
+}

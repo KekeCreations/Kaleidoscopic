@@ -52,6 +52,7 @@ public class KLanguageProvider extends FabricLanguageProvider {
         builder.add(KBlocks.BLEACHED_LAMP.get(), "Bleached Lamp");
 
         builder.add("tab.kaleidoscopic.configurable_tab", "Kaleidoscopic");
+        builder.add("tab.kaleidoscopic.compat_tab", "Kaleidoscopic x Delicate Dyes");
 
     }
 }

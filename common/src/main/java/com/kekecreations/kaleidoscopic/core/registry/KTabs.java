@@ -52,7 +52,47 @@ public class KTabs {
                     pOutput.accept(KBlocks.DYED_ROCK_WALLS.get(colour).get());
                     pOutput.accept(KBlocks.DYED_ROCK_BRICK_WALLS.get(colour).get());
                 }
+            })
+            .build()
+    );
 
+    public static final Supplier<CreativeModeTab> COMPAT_TAB = registerTab("compat_tab", () -> CreativeModeTab.builder(CreativeModeTab.Row.TOP, 5)
+            .title(Component.translatable("tab." + Kaleidoscopic.MOD_ID + ".compat_tab"))
+            .icon(() -> KBlocks.DYED_LAMPS.get(DyeColor.RED).get().asItem().getDefaultInstance())
+            .displayItems((params, pOutput) -> {
+                for (DyeColor colour : DyeColor.values()) {
+                    if (colour.getId() > 15) {
+                        pOutput.accept(KBlocks.DYED_DOORS.get(colour).get());
+                    }
+                }
+                for (DyeColor colour : DyeColor.values()) {
+                    if (colour.getId() > 15) {
+                        pOutput.accept(KBlocks.DYED_TRAPDOORS.get(colour).get());
+                    }
+                }
+                for (DyeColor colour : DyeColor.values()) {
+                    if (colour.getId() > 15) {
+                        pOutput.accept(KBlocks.DYED_LADDERS.get(colour).get());
+                    }
+                }
+                for (DyeColor colour : DyeColor.values()) {
+                    if (colour.getId() > 15) {
+                        pOutput.accept(KBlocks.DYED_LAMPS.get(colour).get());
+                    }
+                }
+                for (DyeColor colour : DyeColor.values()) {
+                    if (colour.getId() > 15) {
+                        pOutput.accept(KBlocks.DYED_ROCKS.get(colour).get());
+                        pOutput.accept(KBlocks.DYED_ROCK_BRICKS.get(colour).get());
+                        pOutput.accept(KBlocks.CHISELED_DYED_ROCKS.get(colour).get());
+                        pOutput.accept(KBlocks.DYED_ROCK_STAIRS.get(colour).get());
+                        pOutput.accept(KBlocks.DYED_ROCK_BRICK_STAIRS.get(colour).get());
+                        pOutput.accept(KBlocks.DYED_ROCK_SLABS.get(colour).get());
+                        pOutput.accept(KBlocks.DYED_ROCK_BRICK_SLABS.get(colour).get());
+                        pOutput.accept(KBlocks.DYED_ROCK_WALLS.get(colour).get());
+                        pOutput.accept(KBlocks.DYED_ROCK_BRICK_WALLS.get(colour).get());
+                    }
+                }
             })
             .build()
     );
