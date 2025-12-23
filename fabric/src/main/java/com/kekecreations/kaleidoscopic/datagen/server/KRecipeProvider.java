@@ -95,9 +95,10 @@ public class KRecipeProvider  extends FabricRecipeProvider {
 
 
     protected static void bleachSquareRecipe(Ingredient craftingBlock, Item dyeColour, Block resultBlock, RecipeOutput output) {
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, resultBlock ,2)
-                .pattern("XK")
-                .pattern("KX")
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, resultBlock ,8)
+                .pattern("KKK")
+                .pattern("KXK")
+                .pattern("KKK")
                 .define('K', craftingBlock)
                 .define('X', dyeColour)
                 .unlockedBy(getItemName(resultBlock), has(dyeColour))
@@ -105,9 +106,10 @@ public class KRecipeProvider  extends FabricRecipeProvider {
     }
 
     protected static void dyeSquareRecipe(Ingredient craftingBlock, DyeColor dyeColour, Block resultBlock, RecipeOutput output) {
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, resultBlock ,2)
-                .pattern("XK")
-                .pattern("KX")
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, resultBlock ,8)
+                .pattern("KKK")
+                .pattern("KXK")
+                .pattern("KKK")
                 .define('K', craftingBlock)
                 .define('X', DyeItem.byColor(dyeColour))
                 .unlockedBy(getItemName(resultBlock), has(DyeItem.byColor(dyeColour)))

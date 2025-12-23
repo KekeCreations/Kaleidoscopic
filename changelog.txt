@@ -1,0 +1,6 @@
+
+
+
+
+### V1.1.0
+- Changed all the dye recipes to 1 dye and 8 blocks can make 8 dyed blocks
