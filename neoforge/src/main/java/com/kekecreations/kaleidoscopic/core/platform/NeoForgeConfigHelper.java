@@ -45,4 +45,12 @@ public class NeoForgeConfigHelper implements IConfigHelper {
         }
         return NeoForgeConfig.ARE_DYED_TRAPDOORS_ENABLED.get();
     }
+
+    @Override
+    public boolean areDyedLampsEnabled() {
+        if (!NeoForgeConfig.SPEC.isLoaded()) {
+            return true;
+        }
+        return NeoForgeConfig.ARE_DYED_LAMPS_ENABLED.get();
+    }
 }

@@ -22,6 +22,14 @@ public class KBlockLootTableProvider extends FabricBlockLootTableProvider {
         ladders();
         doors();
         trapdoors();
+        lamps();
+    }
+
+    private void lamps() {
+        for (DyeColor colour : DyeColor.values()) {
+            dropSelf(KBlocks.DYED_LAMPS.get(colour).get());
+        }
+        dropSelf(KBlocks.BLEACHED_LAMP.get());
     }
 
     private void dyedRocks() {

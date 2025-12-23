@@ -45,4 +45,12 @@ public class FabricConfigHelper implements IConfigHelper {
         }
         return false;
     }
+
+    @Override
+    public boolean areDyedLampsEnabled() {
+        if (FabricKaleidoscopic.getConfig() != null) {
+            return FabricKaleidoscopic.getConfig().areDyedLampsEnabled();
+        }
+        return false;
+    }
 }

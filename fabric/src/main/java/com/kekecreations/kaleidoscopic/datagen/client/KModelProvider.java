@@ -12,9 +12,14 @@ import net.minecraft.data.models.blockstates.MultiVariantGenerator;
 import net.minecraft.data.models.blockstates.Variant;
 import net.minecraft.data.models.blockstates.VariantProperties;
 import net.minecraft.data.models.model.ModelLocationUtils;
+import net.minecraft.data.models.model.ModelTemplates;
+import net.minecraft.data.models.model.TextureMapping;
+import net.minecraft.data.models.model.TexturedModel;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 
 public class KModelProvider extends FabricModelProvider {
     public KModelProvider(FabricDataOutput output) {
@@ -40,6 +45,8 @@ public class KModelProvider extends FabricModelProvider {
             generator.createSimpleFlatItemModel(KBlocks.DYED_LADDERS.get(colour).get());
             generator.createDoor(KBlocks.DYED_DOORS.get(colour).get());
             generator.createOrientableTrapdoor(KBlocks.DYED_TRAPDOORS.get(colour).get());
+
+            createRedstoneLamp(KBlocks.DYED_LAMPS.get(colour).get(), generator);
         }
 
         //compat
@@ -58,15 +65,22 @@ public class KModelProvider extends FabricModelProvider {
         generator.createSimpleFlatItemModel(KBlocks.BLEACHED_LADDER.get());
         generator.createDoor(KBlocks.BLEACHED_DOOR.get());
         generator.createOrientableTrapdoor(KBlocks.BLEACHED_TRAPDOOR.get());
+        createRedstoneLamp(KBlocks.BLEACHED_LAMP.get(), generator);
     }
 
     @Override
     public void generateItemModels(ItemModelGenerators itemModelGenerators) {
-
     }
 
     public final void createDyedLadder(Block ladderBlock, BlockModelGenerators generator) {
         ResourceLocation model = KModelTemplate.LADDER.create(ladderBlock, KTextureMapping.ladderTextureMappings(ladderBlock), generator.modelOutput);
         generator.blockStateOutput.accept(MultiVariantGenerator.multiVariant(ladderBlock, Variant.variant().with(VariantProperties.MODEL, model)).with(BlockModelGenerators.createHorizontalFacingDispatch()));
+    }
+
+    private void createRedstoneLamp(Block lamp, BlockModelGenerators generator) {
+        ResourceLocation resourceLocation = generator.createSuffixedVariant(lamp, "_off", ModelTemplates.CUBE_ALL, TextureMapping::cube);
+        ResourceLocation resourceLocation2 = generator.createSuffixedVariant(lamp, "_on", ModelTemplates.CUBE_ALL, TextureMapping::cube);
+        generator.blockStateOutput.accept(MultiVariantGenerator.multiVariant(lamp).with(generator.createBooleanModelDispatch(BlockStateProperties.LIT, resourceLocation2, resourceLocation)));
+        generator.delegateItemModel(lamp, resourceLocation);
     }
 }

@@ -14,6 +14,7 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.RedstoneLampBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
@@ -42,6 +43,8 @@ public class KBlocks {
 
     public static final HashMap<DyeColor, Supplier<Block>> DYED_DOORS = new HashMap<>();
     public static final HashMap<DyeColor, Supplier<Block>> DYED_TRAPDOORS = new HashMap<>();
+
+    public static final HashMap<DyeColor, Supplier<Block>> DYED_LAMPS = new HashMap<>();
 
 
     static String ArtsAndCrafts = "arts_and_crafts";
@@ -83,6 +86,10 @@ public class KBlocks {
     public static final Supplier<Block> CHISELED_BLEACHED_ROCK = registerCompatRockBlock(ArtsAndCrafts, "chiseled_bleached_rock",
             () -> new CompatRockBlock(ArtsAndCrafts, BlockBehaviour.Properties.ofFullCopy(Blocks.COBBLESTONE.defaultBlockState().getBlock())));
 
+
+    public static final Supplier<Block> BLEACHED_LAMP = registerCompatDyedLamp(ArtsAndCrafts, "bleached_lamp",
+            () -> new CompatLampBlock(ArtsAndCrafts, BlockBehaviour.Properties.ofFullCopy(Blocks.REDSTONE_LAMP)));
+
     static {
         for (DyeColor colour : DyeColor.values()) {
             //DYED ROCKS
@@ -103,9 +110,16 @@ public class KBlocks {
 
             DYED_DOORS.put(colour, registerDyedDoor(colour + "_door", () -> new DyedDoorBlock(BlockSetType.OAK, BlockBehaviour.Properties.of().mapColor(MapColor.WOOD).requiresCorrectToolForDrops().strength(3.0F).noOcclusion().pushReaction(PushReaction.DESTROY).ignitedByLava())));
             DYED_TRAPDOORS.put(colour, registerDyedTrapdoor(colour + "_trapdoor", () -> new DyedTrapdoorBlock(BlockSetType.OAK, BlockBehaviour.Properties.of().mapColor(MapColor.WOOD).instrument(NoteBlockInstrument.BASS).strength(3.0F).noOcclusion().isValidSpawn(KBlocks::never).ignitedByLava())));
+
+            DYED_LAMPS.put(colour, registerLampBlock(colour + "_lamp",  () -> new RedstoneLampBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.REDSTONE_LAMP.defaultBlockState().getBlock()))));
         }
     }
 
+    public static Supplier<Block> registerLampBlock(String name, Supplier<Block> blockSupplier) {
+        var block = JinxedRegistryHelper.registerBlock(Kaleidoscopic.MOD_ID, name, false, blockSupplier);
+        JinxedRegistryHelper.registerItem(Kaleidoscopic.MOD_ID, name, () -> new LampBlockItem(block.get(), new Item.Properties()));
+        return block;
+    }
 
     public static Supplier<Block> registerRockBlock(String name, Supplier<Block> blockSupplier) {
         var block = JinxedRegistryHelper.registerBlock(Kaleidoscopic.MOD_ID, name, false, blockSupplier);
@@ -166,6 +180,12 @@ public class KBlocks {
     public static Supplier<Block> registerCompatDyedTrapdoor(String modID, String name, Supplier<Block> blockSupplier) {
         var block = JinxedRegistryHelper.registerBlock(Kaleidoscopic.MOD_ID, name, false, blockSupplier);
         JinxedRegistryHelper.registerItem(Kaleidoscopic.MOD_ID, name, () -> new CompatDyedTrapdoorBlockItem(modID, block.get(), new Item.Properties()));
+        return block;
+    }
+
+    public static Supplier<Block> registerCompatDyedLamp(String modID, String name, Supplier<Block> blockSupplier) {
+        var block = JinxedRegistryHelper.registerBlock(Kaleidoscopic.MOD_ID, name, false, blockSupplier);
+        JinxedRegistryHelper.registerItem(Kaleidoscopic.MOD_ID, name, () -> new CompatDyedLampBlockItem(modID, block.get(), new Item.Properties()));
         return block;
     }
 

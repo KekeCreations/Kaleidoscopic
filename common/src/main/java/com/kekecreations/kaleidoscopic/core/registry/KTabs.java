@@ -28,6 +28,10 @@ public class KTabs {
                 for (DyeColor colour : JinxedCreativeCategoryUtils.colourOrder) {
                     pOutput.accept(KBlocks.DYED_LADDERS.get(colour).get());
                 }
+                pOutput.accept(KBlocks.BLEACHED_LAMP.get());
+                for (DyeColor colour : JinxedCreativeCategoryUtils.colourOrder) {
+                    pOutput.accept(KBlocks.DYED_LAMPS.get(colour).get());
+                }
                 pOutput.accept(KBlocks.BLEACHED_ROCK.get());
                 pOutput.accept(KBlocks.BLEACHED_ROCK_BRICKS.get());
                 pOutput.accept(KBlocks.CHISELED_BLEACHED_ROCK.get());

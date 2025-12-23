@@ -11,4 +11,6 @@ public interface IConfigHelper {
     boolean areDyedDoorsEnabled();
 
     boolean areDyedTrapdoorsEnabled();
+
+    boolean areDyedLampsEnabled();
 }

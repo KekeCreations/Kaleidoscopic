@@ -56,9 +56,12 @@ public class KRecipeProvider  extends FabricRecipeProvider {
             dyeSquareRecipe(Ingredient.of(KTags.ItemTags.CAN_CRAFT_DOOR), dyeColour, KBlocks.DYED_DOORS.get(dyeColour).get(), recipeOutput);
             //Dyed Trapdoors
             dyeSquareRecipe(Ingredient.of(KTags.ItemTags.CAN_CRAFT_TRAPDOOR), dyeColour, KBlocks.DYED_TRAPDOORS.get(dyeColour).get(), recipeOutput);
+            //Dyed Lamps
+            dyeSquareRecipe(Ingredient.of(Items.REDSTONE_LAMP), dyeColour, KBlocks.DYED_LAMPS.get(dyeColour).get(), recipeOutput);
         }
 
         //COMPAT
+        bleachSquareRecipe(Ingredient.of(Items.REDSTONE_LAMP), ACItems.BLEACHDEW.get(), KBlocks.BLEACHED_LAMP.get(), recipeOutput);
         bleachSquareRecipe(Ingredient.of(new ItemStack(Items.LADDER)), ACItems.BLEACHDEW.get(), KBlocks.BLEACHED_LADDER.get(), recipeOutput);
         //Dyed Doors
         bleachSquareRecipe(Ingredient.of(KTags.ItemTags.CAN_CRAFT_DOOR), ACItems.BLEACHDEW.get(), KBlocks.BLEACHED_DOOR.get(), recipeOutput);

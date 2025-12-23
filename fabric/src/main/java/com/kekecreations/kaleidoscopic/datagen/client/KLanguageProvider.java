@@ -33,6 +33,8 @@ public class KLanguageProvider extends FabricLanguageProvider {
             builder.add(KBlocks.DYED_LADDERS.get(colour).get(), stringColour + " Ladder");
             builder.add(KBlocks.DYED_DOORS.get(colour).get(), stringColour + " Door");
             builder.add(KBlocks.DYED_TRAPDOORS.get(colour).get(), stringColour + " Trapdoor");
+
+            builder.add(KBlocks.DYED_LAMPS.get(colour).get(), stringColour + " Lamp");
         }
 
         builder.add(KBlocks.CHISELED_BLEACHED_ROCK.get(), "Chiseled Bleached Rock");
@@ -47,6 +49,7 @@ public class KLanguageProvider extends FabricLanguageProvider {
         builder.add(KBlocks.BLEACHED_LADDER.get(), "Bleached Ladder");
         builder.add(KBlocks.BLEACHED_DOOR.get(), "Bleached Door");
         builder.add(KBlocks.BLEACHED_TRAPDOOR.get(), "Bleached Trapdoor");
+        builder.add(KBlocks.BLEACHED_LAMP.get(), "Bleached Lamp");
 
         builder.add("tab.kaleidoscopic.configurable_tab", "Kaleidoscopic");
 

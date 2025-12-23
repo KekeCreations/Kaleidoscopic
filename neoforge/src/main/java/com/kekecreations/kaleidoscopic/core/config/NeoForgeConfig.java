@@ -13,6 +13,8 @@ public class NeoForgeConfig {
     public static final ModConfigSpec.BooleanValue ARE_DYED_DOORS_ENABLED;
     public static final ModConfigSpec.BooleanValue ARE_DYED_TRAPDOORS_ENABLED;
 
+    public static final ModConfigSpec.BooleanValue ARE_DYED_LAMPS_ENABLED;
+
 
     static {
         BUILDER.push("Kaleidoscopic Config");
@@ -40,6 +42,10 @@ public class NeoForgeConfig {
         ARE_DYED_TRAPDOORS_ENABLED = BUILDER
                 .comment("Enables Dyed Trapdoors!")
                 .define("dyedTrapdoors", true);
+
+        ARE_DYED_LAMPS_ENABLED = BUILDER
+                .comment("Enables Dyed Lamps!")
+                .define("dyedLamps", true);
 
 
 
