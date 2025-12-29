@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "kaleidoscopic:block/sky_rock_slab"
+    },
+    "type=double": {
+      "model": "kaleidoscopic:block/sky_rock"
+    },
+    "type=top": {
+      "model": "kaleidoscopic:block/sky_rock_slab_top"
+    }
+  }
+}

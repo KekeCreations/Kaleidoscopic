@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "blurple_ladder": {
+      "conditions": {
+        "items": [
+          {
+            "items": "delicate_dyes:blurple_dye"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:blurple_ladder_type"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "blurple_ladder"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:blurple_ladder_type"
+    ]
+  }
+}

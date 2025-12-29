@@ -16,6 +16,46 @@
     "kaleidoscopic:green_rock",
     "kaleidoscopic:red_rock",
     "kaleidoscopic:black_rock",
+    {
+      "id": "kaleidoscopic:coral_rock",
+      "required": false
+    },
+    {
+      "id": "kaleidoscopic:umber_rock",
+      "required": false
+    },
+    {
+      "id": "kaleidoscopic:canary_rock",
+      "required": false
+    },
+    {
+      "id": "kaleidoscopic:wasabi_rock",
+      "required": false
+    },
+    {
+      "id": "kaleidoscopic:sacramento_rock",
+      "required": false
+    },
+    {
+      "id": "kaleidoscopic:sky_rock",
+      "required": false
+    },
+    {
+      "id": "kaleidoscopic:blurple_rock",
+      "required": false
+    },
+    {
+      "id": "kaleidoscopic:lavender_rock",
+      "required": false
+    },
+    {
+      "id": "kaleidoscopic:sangria_rock",
+      "required": false
+    },
+    {
+      "id": "kaleidoscopic:rose_rock",
+      "required": false
+    },
     "kaleidoscopic:bleached_rock"
   ]
 }

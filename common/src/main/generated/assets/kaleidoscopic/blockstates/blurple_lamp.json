@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "lit=false": {
+      "model": "kaleidoscopic:block/blurple_lamp_off"
+    },
+    "lit=true": {
+      "model": "kaleidoscopic:block/blurple_lamp_on"
+    }
+  }
+}

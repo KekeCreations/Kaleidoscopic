@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "coral_lamp": {
+      "conditions": {
+        "items": [
+          {
+            "items": "delicate_dyes:coral_dye"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:coral_lamp_type"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "coral_lamp"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:coral_lamp_type"
+    ]
+  }
+}

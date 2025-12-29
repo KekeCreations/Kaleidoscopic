@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:wasabi_trapdoor_type"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "wasabi_trapdoor": {
+      "conditions": {
+        "items": [
+          {
+            "items": "delicate_dyes:wasabi_dye"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "wasabi_trapdoor"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:wasabi_trapdoor_type"
+    ]
+  }
+}
