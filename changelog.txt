@@ -1,4 +1,7 @@
-
+### V1.1.2
+- Removed Delicate Dyes Compat (hopefully it'll return soon, play V1.1.0 if you want compat features)
+- Fixed Mineable tags breaking (Due to Delicate Dye support)
+- Fixed Arts & Crafts compat textures!
 
 
 

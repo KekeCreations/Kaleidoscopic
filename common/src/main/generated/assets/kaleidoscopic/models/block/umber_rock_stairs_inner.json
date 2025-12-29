@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/inner_stairs",
-  "textures": {
-    "bottom": "kaleidoscopic:block/umber_rock",
-    "side": "kaleidoscopic:block/umber_rock",
-    "top": "kaleidoscopic:block/umber_rock"
-  }
-}

@@ -1,7 +1,0 @@
-{
-  "parent": "minecraft:block/door_bottom_left",
-  "textures": {
-    "bottom": "kaleidoscopic:block/umber_door_bottom",
-    "top": "kaleidoscopic:block/umber_door_top"
-  }
-}
