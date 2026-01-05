@@ -1,3 +1,8 @@
+### V1.1.3
+- Re-added Delicate Dye Compat (A massive thanks to TheArtyrian for fixing this for me!)
+- Stonecutter slab recipes now give 2 slabs instead of 1
+
+
 ### V1.1.2
 - Removed Delicate Dyes Compat (hopefully it'll return soon, play V1.1.0 if you want compat features)
 - Fixed Mineable tags breaking (Due to Delicate Dye support)

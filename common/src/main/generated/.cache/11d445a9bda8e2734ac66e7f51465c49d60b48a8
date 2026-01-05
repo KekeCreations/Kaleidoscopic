@@ -1,17 +1,17 @@
-// 1.21.1	2025-12-29T02:04:43.6921159	Kaleidoscopic/Tags for minecraft:block
+// 1.21.1	2026-01-05T01:22:30.2575982	Kaleidoscopic/Tags for minecraft:block
 a95e97241f093cf6ef4907b2cc96ae2d8f8e153e data\minecraft\tags\block\mineable\pickaxe.json
-26ea846c0cee58f2e0f578e8d4826e88cc8e09bb data\kaleidoscopic\tags\block\rock_wall.json
-3ac71cd7f0f5c501346db03176dca0efdeb3685f data\kaleidoscopic\tags\block\rock_stairs.json
+a732537b8afb3fe0b6d55fafb68e299dd0a26710 data\minecraft\tags\block\climbable.json
 dd64a2d784c0cc67fd78f41502ff73d64c4548aa data\kaleidoscopic\tags\block\rock_brick_wall.json
+419278abada06a7a987b70a5628eda92b67559a8 data\kaleidoscopic\tags\block\chiseled_rock.json
 59954894c9149c7347e5c17c44d303302a43309f data\minecraft\tags\block\mineable\axe.json
-e3d32807261fc9f647b94692f4a4702ce5625221 data\kaleidoscopic\tags\block\dyed_doors.json
-6d52b848f13c9c9d2805d17c5b6d98c5b476ccd0 data\kaleidoscopic\tags\block\rock_brick_stairs.json
-96ebb12ed811991c6a1dc6bcde1dfec3c55b6217 data\kaleidoscopic\tags\block\dyed_trapdoors.json
 dfed6fe2bf95e8d4c882a65973f868b39a1b0819 data\kaleidoscopic\tags\block\rock_slab.json
 a732537b8afb3fe0b6d55fafb68e299dd0a26710 data\kaleidoscopic\tags\block\dyed_ladders.json
-419278abada06a7a987b70a5628eda92b67559a8 data\kaleidoscopic\tags\block\chiseled_rock.json
+e3d32807261fc9f647b94692f4a4702ce5625221 data\kaleidoscopic\tags\block\dyed_doors.json
+3ac71cd7f0f5c501346db03176dca0efdeb3685f data\kaleidoscopic\tags\block\rock_stairs.json
+6d52b848f13c9c9d2805d17c5b6d98c5b476ccd0 data\kaleidoscopic\tags\block\rock_brick_stairs.json
+96ebb12ed811991c6a1dc6bcde1dfec3c55b6217 data\kaleidoscopic\tags\block\dyed_trapdoors.json
+26ea846c0cee58f2e0f578e8d4826e88cc8e09bb data\kaleidoscopic\tags\block\rock_wall.json
+474dec7ef1f652017409f01dc94c107c43b813cb data\kaleidoscopic\tags\block\rock.json
+b157342d7476d8b9bf4031283ba60d0558b52c27 data\kaleidoscopic\tags\block\rock_bricks.json
 39d4a228440b489a02d94bcaca3f3fe8f294cc32 data\minecraft\tags\block\walls.json
 e077b74429a66136791ea2e9dcd398b8efbe1390 data\kaleidoscopic\tags\block\rock_brick_slab.json
-a732537b8afb3fe0b6d55fafb68e299dd0a26710 data\minecraft\tags\block\climbable.json
-b157342d7476d8b9bf4031283ba60d0558b52c27 data\kaleidoscopic\tags\block\rock_bricks.json
-474dec7ef1f652017409f01dc94c107c43b813cb data\kaleidoscopic\tags\block\rock.json
