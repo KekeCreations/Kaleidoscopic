@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:sangria_ladder_type"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "sangria_ladder": {
+      "conditions": {
+        "items": [
+          {
+            "items": "delicate_dyes:sangria_dye"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "sangria_ladder"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:sangria_ladder_type"
+    ]
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "kaleidoscopic:canary_rock_bricks"
+  },
+  "result": {
+    "count": 1,
+    "id": "kaleidoscopic:canary_rock_brick_wall"
+  }
+}

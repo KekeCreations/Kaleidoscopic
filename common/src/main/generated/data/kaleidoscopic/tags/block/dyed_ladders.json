@@ -16,6 +16,46 @@
     "kaleidoscopic:green_ladder",
     "kaleidoscopic:red_ladder",
     "kaleidoscopic:black_ladder",
+    {
+      "id": "kaleidoscopic:coral_ladder",
+      "required": false
+    },
+    {
+      "id": "kaleidoscopic:umber_ladder",
+      "required": false
+    },
+    {
+      "id": "kaleidoscopic:canary_ladder",
+      "required": false
+    },
+    {
+      "id": "kaleidoscopic:wasabi_ladder",
+      "required": false
+    },
+    {
+      "id": "kaleidoscopic:sacramento_ladder",
+      "required": false
+    },
+    {
+      "id": "kaleidoscopic:sky_ladder",
+      "required": false
+    },
+    {
+      "id": "kaleidoscopic:blurple_ladder",
+      "required": false
+    },
+    {
+      "id": "kaleidoscopic:lavender_ladder",
+      "required": false
+    },
+    {
+      "id": "kaleidoscopic:sangria_ladder",
+      "required": false
+    },
+    {
+      "id": "kaleidoscopic:rose_ladder",
+      "required": false
+    },
     "kaleidoscopic:bleached_ladder"
   ]
 }

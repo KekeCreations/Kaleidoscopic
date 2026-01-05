@@ -48,6 +48,126 @@
     "kaleidoscopic:black_ladder",
     "kaleidoscopic:black_door",
     "kaleidoscopic:black_trapdoor",
+    {
+      "id": "kaleidoscopic:coral_ladder",
+      "required": false
+    },
+    {
+      "id": "kaleidoscopic:coral_door",
+      "required": false
+    },
+    {
+      "id": "kaleidoscopic:coral_trapdoor",
+      "required": false
+    },
+    {
+      "id": "kaleidoscopic:umber_ladder",
+      "required": false
+    },
+    {
+      "id": "kaleidoscopic:umber_door",
+      "required": false
+    },
+    {
+      "id": "kaleidoscopic:umber_trapdoor",
+      "required": false
+    },
+    {
+      "id": "kaleidoscopic:canary_ladder",
+      "required": false
+    },
+    {
+      "id": "kaleidoscopic:canary_door",
+      "required": false
+    },
+    {
+      "id": "kaleidoscopic:canary_trapdoor",
+      "required": false
+    },
+    {
+      "id": "kaleidoscopic:wasabi_ladder",
+      "required": false
+    },
+    {
+      "id": "kaleidoscopic:wasabi_door",
+      "required": false
+    },
+    {
+      "id": "kaleidoscopic:wasabi_trapdoor",
+      "required": false
+    },
+    {
+      "id": "kaleidoscopic:sacramento_ladder",
+      "required": false
+    },
+    {
+      "id": "kaleidoscopic:sacramento_door",
+      "required": false
+    },
+    {
+      "id": "kaleidoscopic:sacramento_trapdoor",
+      "required": false
+    },
+    {
+      "id": "kaleidoscopic:sky_ladder",
+      "required": false
+    },
+    {
+      "id": "kaleidoscopic:sky_door",
+      "required": false
+    },
+    {
+      "id": "kaleidoscopic:sky_trapdoor",
+      "required": false
+    },
+    {
+      "id": "kaleidoscopic:blurple_ladder",
+      "required": false
+    },
+    {
+      "id": "kaleidoscopic:blurple_door",
+      "required": false
+    },
+    {
+      "id": "kaleidoscopic:blurple_trapdoor",
+      "required": false
+    },
+    {
+      "id": "kaleidoscopic:lavender_ladder",
+      "required": false
+    },
+    {
+      "id": "kaleidoscopic:lavender_door",
+      "required": false
+    },
+    {
+      "id": "kaleidoscopic:lavender_trapdoor",
+      "required": false
+    },
+    {
+      "id": "kaleidoscopic:sangria_ladder",
+      "required": false
+    },
+    {
+      "id": "kaleidoscopic:sangria_door",
+      "required": false
+    },
+    {
+      "id": "kaleidoscopic:sangria_trapdoor",
+      "required": false
+    },
+    {
+      "id": "kaleidoscopic:rose_ladder",
+      "required": false
+    },
+    {
+      "id": "kaleidoscopic:rose_door",
+      "required": false
+    },
+    {
+      "id": "kaleidoscopic:rose_trapdoor",
+      "required": false
+    },
     "kaleidoscopic:bleached_ladder",
     "kaleidoscopic:bleached_door",
     "kaleidoscopic:bleached_trapdoor"

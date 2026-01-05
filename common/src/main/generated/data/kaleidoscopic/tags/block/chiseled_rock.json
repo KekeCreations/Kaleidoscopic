@@ -16,6 +16,46 @@
     "kaleidoscopic:chiseled_green_rock",
     "kaleidoscopic:chiseled_red_rock",
     "kaleidoscopic:chiseled_black_rock",
+    {
+      "id": "kaleidoscopic:chiseled_coral_rock",
+      "required": false
+    },
+    {
+      "id": "kaleidoscopic:chiseled_umber_rock",
+      "required": false
+    },
+    {
+      "id": "kaleidoscopic:chiseled_canary_rock",
+      "required": false
+    },
+    {
+      "id": "kaleidoscopic:chiseled_wasabi_rock",
+      "required": false
+    },
+    {
+      "id": "kaleidoscopic:chiseled_sacramento_rock",
+      "required": false
+    },
+    {
+      "id": "kaleidoscopic:chiseled_sky_rock",
+      "required": false
+    },
+    {
+      "id": "kaleidoscopic:chiseled_blurple_rock",
+      "required": false
+    },
+    {
+      "id": "kaleidoscopic:chiseled_lavender_rock",
+      "required": false
+    },
+    {
+      "id": "kaleidoscopic:chiseled_sangria_rock",
+      "required": false
+    },
+    {
+      "id": "kaleidoscopic:chiseled_rose_rock",
+      "required": false
+    },
     "kaleidoscopic:chiseled_bleached_rock"
   ]
 }

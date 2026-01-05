@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:sacramento_rock_wall_type"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "sacramento_rock_wall": {
+      "conditions": {
+        "items": [
+          {
+            "items": "delicate_dyes:sacramento_dye"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "sacramento_rock_wall"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:sacramento_rock_wall_type"
+    ]
+  }
+}

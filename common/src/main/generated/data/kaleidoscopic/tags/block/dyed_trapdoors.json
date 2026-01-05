@@ -16,6 +16,46 @@
     "kaleidoscopic:green_trapdoor",
     "kaleidoscopic:red_trapdoor",
     "kaleidoscopic:black_trapdoor",
+    {
+      "id": "kaleidoscopic:coral_trapdoor",
+      "required": false
+    },
+    {
+      "id": "kaleidoscopic:umber_trapdoor",
+      "required": false
+    },
+    {
+      "id": "kaleidoscopic:canary_trapdoor",
+      "required": false
+    },
+    {
+      "id": "kaleidoscopic:wasabi_trapdoor",
+      "required": false
+    },
+    {
+      "id": "kaleidoscopic:sacramento_trapdoor",
+      "required": false
+    },
+    {
+      "id": "kaleidoscopic:sky_trapdoor",
+      "required": false
+    },
+    {
+      "id": "kaleidoscopic:blurple_trapdoor",
+      "required": false
+    },
+    {
+      "id": "kaleidoscopic:lavender_trapdoor",
+      "required": false
+    },
+    {
+      "id": "kaleidoscopic:sangria_trapdoor",
+      "required": false
+    },
+    {
+      "id": "kaleidoscopic:rose_trapdoor",
+      "required": false
+    },
     "kaleidoscopic:bleached_trapdoor"
   ]
 }

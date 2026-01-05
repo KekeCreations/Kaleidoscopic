@@ -16,6 +16,46 @@
     "kaleidoscopic:green_rock_bricks",
     "kaleidoscopic:red_rock_bricks",
     "kaleidoscopic:black_rock_bricks",
+    {
+      "id": "kaleidoscopic:coral_rock_bricks",
+      "required": false
+    },
+    {
+      "id": "kaleidoscopic:umber_rock_bricks",
+      "required": false
+    },
+    {
+      "id": "kaleidoscopic:canary_rock_bricks",
+      "required": false
+    },
+    {
+      "id": "kaleidoscopic:wasabi_rock_bricks",
+      "required": false
+    },
+    {
+      "id": "kaleidoscopic:sacramento_rock_bricks",
+      "required": false
+    },
+    {
+      "id": "kaleidoscopic:sky_rock_bricks",
+      "required": false
+    },
+    {
+      "id": "kaleidoscopic:blurple_rock_bricks",
+      "required": false
+    },
+    {
+      "id": "kaleidoscopic:lavender_rock_bricks",
+      "required": false
+    },
+    {
+      "id": "kaleidoscopic:sangria_rock_bricks",
+      "required": false
+    },
+    {
+      "id": "kaleidoscopic:rose_rock_bricks",
+      "required": false
+    },
     "kaleidoscopic:bleached_rock_bricks"
   ]
 }

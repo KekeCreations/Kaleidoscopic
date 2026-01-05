@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "K": {
+      "tag": "kaleidoscopic:can_craft_rock_wall"
+    },
+    "X": {
+      "item": "delicate_dyes:coral_dye"
+    }
+  },
+  "pattern": [
+    "KKK",
+    "KXK",
+    "KKK"
+  ],
+  "result": {
+    "count": 8,
+    "id": "kaleidoscopic:coral_rock_wall"
+  }
+}

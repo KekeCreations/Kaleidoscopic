@@ -5,8 +5,11 @@ import com.kekecreations.kaleidoscopic.core.registry.KBlocks;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.minecraft.core.HolderLookup;
+import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.world.item.DyeColor;
+import net.minecraft.world.level.block.Block;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -38,17 +41,32 @@ public class KBlockTagProvider extends FabricTagProvider.BlockTagProvider{
 
     private void pickaxeMineable() {
         for (DyeColor colour : DyeColor.values()) {
-            this.getOrCreateTagBuilder(BlockTags.MINEABLE_WITH_PICKAXE)
-                    .add(KBlocks.CHISELED_DYED_ROCKS.get(colour).get())
-                    .add(KBlocks.DYED_ROCKS.get(colour).get())
-                    .add(KBlocks.DYED_ROCK_STAIRS.get(colour).get())
-                    .add(KBlocks.DYED_ROCK_SLABS.get(colour).get())
-                    .add(KBlocks.DYED_ROCK_WALLS.get(colour).get())
-                    .add(KBlocks.DYED_ROCK_BRICKS.get(colour).get())
-                    .add(KBlocks.DYED_ROCK_BRICK_STAIRS.get(colour).get())
-                    .add(KBlocks.DYED_ROCK_BRICK_SLABS.get(colour).get())
-                    .add(KBlocks.DYED_ROCK_BRICK_WALLS.get(colour).get())
-            ;
+            if (colour.getId() > DyeColor.BLACK.getId()) {
+                this.getOrCreateTagBuilder(BlockTags.MINEABLE_WITH_PICKAXE)
+                        .addOptional(getOpt(KBlocks.CHISELED_DYED_ROCKS.get(colour).get()))
+                        .addOptional(getOpt(KBlocks.DYED_ROCKS.get(colour).get()))
+                        .addOptional(getOpt(KBlocks.DYED_ROCK_STAIRS.get(colour).get()))
+                        .addOptional(getOpt(KBlocks.DYED_ROCK_SLABS.get(colour).get()))
+                        .addOptional(getOpt(KBlocks.DYED_ROCK_WALLS.get(colour).get()))
+                        .addOptional(getOpt(KBlocks.DYED_ROCK_BRICKS.get(colour).get()))
+                        .addOptional(getOpt(KBlocks.DYED_ROCK_BRICK_STAIRS.get(colour).get()))
+                        .addOptional(getOpt(KBlocks.DYED_ROCK_BRICK_SLABS.get(colour).get()))
+                        .addOptional(getOpt(KBlocks.DYED_ROCK_BRICK_WALLS.get(colour).get()))
+                ;
+            }
+            else {
+                this.getOrCreateTagBuilder(BlockTags.MINEABLE_WITH_PICKAXE)
+                        .add(KBlocks.CHISELED_DYED_ROCKS.get(colour).get())
+                        .add(KBlocks.DYED_ROCKS.get(colour).get())
+                        .add(KBlocks.DYED_ROCK_STAIRS.get(colour).get())
+                        .add(KBlocks.DYED_ROCK_SLABS.get(colour).get())
+                        .add(KBlocks.DYED_ROCK_WALLS.get(colour).get())
+                        .add(KBlocks.DYED_ROCK_BRICKS.get(colour).get())
+                        .add(KBlocks.DYED_ROCK_BRICK_STAIRS.get(colour).get())
+                        .add(KBlocks.DYED_ROCK_BRICK_SLABS.get(colour).get())
+                        .add(KBlocks.DYED_ROCK_BRICK_WALLS.get(colour).get())
+                ;
+            }
         }
         this.getOrCreateTagBuilder(BlockTags.MINEABLE_WITH_PICKAXE)
                 .add(KBlocks.CHISELED_BLEACHED_ROCK.get())
@@ -65,11 +83,20 @@ public class KBlockTagProvider extends FabricTagProvider.BlockTagProvider{
 
     private void axeMineable() {
         for (DyeColor colour : DyeColor.values()) {
-            this.getOrCreateTagBuilder(BlockTags.MINEABLE_WITH_AXE)
-                    .add(KBlocks.DYED_LADDERS.get(colour).get())
-                    .add(KBlocks.DYED_DOORS.get(colour).get())
-                    .add(KBlocks.DYED_TRAPDOORS.get(colour).get())
-            ;
+            if (colour.getId() > DyeColor.BLACK.getId()) {
+                this.getOrCreateTagBuilder(BlockTags.MINEABLE_WITH_AXE)
+                        .addOptional(getOpt(KBlocks.DYED_LADDERS.get(colour).get()))
+                        .addOptional(getOpt(KBlocks.DYED_DOORS.get(colour).get()))
+                        .addOptional(getOpt(KBlocks.DYED_TRAPDOORS.get(colour).get()))
+                ;
+            }
+            else {
+                this.getOrCreateTagBuilder(BlockTags.MINEABLE_WITH_AXE)
+                        .add(KBlocks.DYED_LADDERS.get(colour).get())
+                        .add(KBlocks.DYED_DOORS.get(colour).get())
+                        .add(KBlocks.DYED_TRAPDOORS.get(colour).get())
+                ;
+            }
         }
         this.getOrCreateTagBuilder(BlockTags.MINEABLE_WITH_AXE)
                 .add(KBlocks.BLEACHED_LADDER.get())
@@ -80,8 +107,14 @@ public class KBlockTagProvider extends FabricTagProvider.BlockTagProvider{
 
     private void climbable() {
         for (DyeColor colour : DyeColor.values()) {
-            this.getOrCreateTagBuilder(BlockTags.CLIMBABLE)
-                    .add(KBlocks.DYED_LADDERS.get(colour).get());
+            if (colour.getId() > DyeColor.BLACK.getId()) {
+                this.getOrCreateTagBuilder(BlockTags.CLIMBABLE)
+                        .addOptional(getOpt(KBlocks.DYED_LADDERS.get(colour).get()));
+            }
+            else {
+                this.getOrCreateTagBuilder(BlockTags.CLIMBABLE)
+                        .add(KBlocks.DYED_LADDERS.get(colour).get());
+            }
         }
         this.getOrCreateTagBuilder(BlockTags.CLIMBABLE)
                 .add(KBlocks.BLEACHED_LADDER.get());
@@ -89,8 +122,14 @@ public class KBlockTagProvider extends FabricTagProvider.BlockTagProvider{
 
     private void rock() {
         for (DyeColor colour : DyeColor.values()) {
-            this.getOrCreateTagBuilder(KTags.BlockTags.ROCK)
-                    .add(KBlocks.DYED_ROCKS.get(colour).get());
+            if (colour.getId() > DyeColor.BLACK.getId()) {
+                this.getOrCreateTagBuilder(KTags.BlockTags.ROCK)
+                        .addOptional(getOpt(KBlocks.DYED_ROCKS.get(colour).get()));
+            }
+            else {
+                this.getOrCreateTagBuilder(KTags.BlockTags.ROCK)
+                        .add(KBlocks.DYED_ROCKS.get(colour).get());
+            }
         }
         this.getOrCreateTagBuilder(KTags.BlockTags.ROCK)
                 .add(KBlocks.BLEACHED_ROCK.get());
@@ -98,8 +137,14 @@ public class KBlockTagProvider extends FabricTagProvider.BlockTagProvider{
 
     private void rockChiseled() {
         for (DyeColor colour : DyeColor.values()) {
-            this.getOrCreateTagBuilder(KTags.BlockTags.CHISELED_ROCK)
-                    .add(KBlocks.CHISELED_DYED_ROCKS.get(colour).get());
+            if (colour.getId() > DyeColor.BLACK.getId()) {
+                this.getOrCreateTagBuilder(KTags.BlockTags.CHISELED_ROCK)
+                        .addOptional(getOpt(KBlocks.CHISELED_DYED_ROCKS.get(colour).get()));
+            }
+            else {
+                this.getOrCreateTagBuilder(KTags.BlockTags.CHISELED_ROCK)
+                        .add(KBlocks.CHISELED_DYED_ROCKS.get(colour).get());
+            }
         }
         this.getOrCreateTagBuilder(KTags.BlockTags.CHISELED_ROCK)
                 .add(KBlocks.CHISELED_BLEACHED_ROCK.get());
@@ -107,8 +152,14 @@ public class KBlockTagProvider extends FabricTagProvider.BlockTagProvider{
 
     private void rockStairs() {
         for (DyeColor colour : DyeColor.values()) {
-            this.getOrCreateTagBuilder(KTags.BlockTags.ROCK_STAIRS)
-                    .add(KBlocks.DYED_ROCK_STAIRS.get(colour).get());
+            if (colour.getId() > DyeColor.BLACK.getId()) {
+                this.getOrCreateTagBuilder(KTags.BlockTags.ROCK_STAIRS)
+                        .addOptional(getOpt(KBlocks.DYED_ROCK_STAIRS.get(colour).get()));
+            }
+            else {
+                this.getOrCreateTagBuilder(KTags.BlockTags.ROCK_STAIRS)
+                        .add(KBlocks.DYED_ROCK_STAIRS.get(colour).get());
+            }
         }
         this.getOrCreateTagBuilder(KTags.BlockTags.ROCK_STAIRS)
                 .add(KBlocks.BLEACHED_ROCK_STAIRS.get());
@@ -116,8 +167,14 @@ public class KBlockTagProvider extends FabricTagProvider.BlockTagProvider{
 
     private void rockSlab() {
         for (DyeColor colour : DyeColor.values()) {
-            this.getOrCreateTagBuilder(KTags.BlockTags.ROCK_SLAB)
-                    .add(KBlocks.DYED_ROCK_SLABS.get(colour).get());
+            if (colour.getId() > DyeColor.BLACK.getId()) {
+                this.getOrCreateTagBuilder(KTags.BlockTags.ROCK_SLAB)
+                        .addOptional(getOpt(KBlocks.DYED_ROCK_SLABS.get(colour).get()));
+            }
+            else {
+                this.getOrCreateTagBuilder(KTags.BlockTags.ROCK_SLAB)
+                        .add(KBlocks.DYED_ROCK_SLABS.get(colour).get());
+            }
         }
         this.getOrCreateTagBuilder(KTags.BlockTags.ROCK_SLAB)
                 .add(KBlocks.BLEACHED_ROCK_SLAB.get());
@@ -125,8 +182,14 @@ public class KBlockTagProvider extends FabricTagProvider.BlockTagProvider{
 
     private void rockWall() {
         for (DyeColor colour : DyeColor.values()) {
-            this.getOrCreateTagBuilder(KTags.BlockTags.ROCK_WALL)
-                    .add(KBlocks.DYED_ROCK_WALLS.get(colour).get());
+            if (colour.getId() > DyeColor.BLACK.getId()) {
+                this.getOrCreateTagBuilder(KTags.BlockTags.ROCK_WALL)
+                        .addOptional(getOpt(KBlocks.DYED_ROCK_WALLS.get(colour).get()));
+            }
+            else {
+                this.getOrCreateTagBuilder(KTags.BlockTags.ROCK_WALL)
+                        .add(KBlocks.DYED_ROCK_WALLS.get(colour).get());
+            }
         }
         this.getOrCreateTagBuilder(KTags.BlockTags.ROCK_WALL)
                 .add(KBlocks.BLEACHED_ROCK_WALL.get());
@@ -135,8 +198,14 @@ public class KBlockTagProvider extends FabricTagProvider.BlockTagProvider{
 
     private void rockBricks() {
         for (DyeColor colour : DyeColor.values()) {
-            this.getOrCreateTagBuilder(KTags.BlockTags.ROCK_BRICKS)
-                    .add(KBlocks.DYED_ROCK_BRICKS.get(colour).get());
+            if (colour.getId() > DyeColor.BLACK.getId()) {
+                this.getOrCreateTagBuilder(KTags.BlockTags.ROCK_BRICKS)
+                        .addOptional(getOpt(KBlocks.DYED_ROCK_BRICKS.get(colour).get()));
+            }
+            else {
+                this.getOrCreateTagBuilder(KTags.BlockTags.ROCK_BRICKS)
+                        .add(KBlocks.DYED_ROCK_BRICKS.get(colour).get());
+            }
         }
         this.getOrCreateTagBuilder(KTags.BlockTags.ROCK_BRICKS)
                 .add(KBlocks.BLEACHED_ROCK_BRICKS.get());
@@ -144,8 +213,14 @@ public class KBlockTagProvider extends FabricTagProvider.BlockTagProvider{
 
     private void rockBrickStairs() {
         for (DyeColor colour : DyeColor.values()) {
-            this.getOrCreateTagBuilder(KTags.BlockTags.ROCK_BRICK_STAIRS)
-                    .add(KBlocks.DYED_ROCK_BRICK_STAIRS.get(colour).get());
+            if (colour.getId() > DyeColor.BLACK.getId()) {
+                this.getOrCreateTagBuilder(KTags.BlockTags.ROCK_BRICK_STAIRS)
+                        .addOptional(getOpt(KBlocks.DYED_ROCK_BRICK_STAIRS.get(colour).get()));
+            }
+            else {
+                this.getOrCreateTagBuilder(KTags.BlockTags.ROCK_BRICK_STAIRS)
+                        .add(KBlocks.DYED_ROCK_BRICK_STAIRS.get(colour).get());
+            }
         }
         this.getOrCreateTagBuilder(KTags.BlockTags.ROCK_BRICK_STAIRS)
                 .add(KBlocks.BLEACHED_ROCK_BRICK_STAIRS.get());
@@ -153,8 +228,14 @@ public class KBlockTagProvider extends FabricTagProvider.BlockTagProvider{
 
     private void rockBrickSlab() {
         for (DyeColor colour : DyeColor.values()) {
-            this.getOrCreateTagBuilder(KTags.BlockTags.ROCK_BRICK_SLAB)
-                    .add(KBlocks.DYED_ROCK_BRICK_SLABS.get(colour).get());
+            if (colour.getId() > DyeColor.BLACK.getId()) {
+                this.getOrCreateTagBuilder(KTags.BlockTags.ROCK_BRICK_SLAB)
+                        .addOptional(getOpt(KBlocks.DYED_ROCK_BRICK_SLABS.get(colour).get()));
+            }
+            else {
+                this.getOrCreateTagBuilder(KTags.BlockTags.ROCK_BRICK_SLAB)
+                        .add(KBlocks.DYED_ROCK_BRICK_SLABS.get(colour).get());
+            }
         }
         this.getOrCreateTagBuilder(KTags.BlockTags.ROCK_BRICK_SLAB)
                 .add(KBlocks.BLEACHED_ROCK_BRICK_SLAB.get());
@@ -162,8 +243,14 @@ public class KBlockTagProvider extends FabricTagProvider.BlockTagProvider{
 
     private void rockBrickWall() {
         for (DyeColor colour : DyeColor.values()) {
-            this.getOrCreateTagBuilder(KTags.BlockTags.ROCK_BRICK_WALL)
-                    .add(KBlocks.DYED_ROCK_BRICK_WALLS.get(colour).get());
+            if (colour.getId() > DyeColor.BLACK.getId()) {
+                this.getOrCreateTagBuilder(KTags.BlockTags.ROCK_BRICK_WALL)
+                        .addOptional(getOpt(KBlocks.DYED_ROCK_BRICK_WALLS.get(colour).get()));
+            }
+            else {
+                this.getOrCreateTagBuilder(KTags.BlockTags.ROCK_BRICK_WALL)
+                        .add(KBlocks.DYED_ROCK_BRICK_WALLS.get(colour).get());
+            }
         }
         this.getOrCreateTagBuilder(KTags.BlockTags.ROCK_BRICK_WALL)
                 .add(KBlocks.BLEACHED_ROCK_BRICK_WALL.get());
@@ -171,8 +258,14 @@ public class KBlockTagProvider extends FabricTagProvider.BlockTagProvider{
 
     private void ladders() {
         for (DyeColor colour : DyeColor.values()) {
-            this.getOrCreateTagBuilder(KTags.BlockTags.DYED_LADDERS)
-                    .add(KBlocks.DYED_LADDERS.get(colour).get());
+            if (colour.getId() > DyeColor.BLACK.getId()) {
+                this.getOrCreateTagBuilder(KTags.BlockTags.DYED_LADDERS)
+                        .addOptional(getOpt(KBlocks.DYED_LADDERS.get(colour).get()));
+            }
+            else {
+                this.getOrCreateTagBuilder(KTags.BlockTags.DYED_LADDERS)
+                        .add(KBlocks.DYED_LADDERS.get(colour).get());
+            }
         }
         this.getOrCreateTagBuilder(KTags.BlockTags.DYED_LADDERS)
                 .add(KBlocks.BLEACHED_LADDER.get());
@@ -180,8 +273,14 @@ public class KBlockTagProvider extends FabricTagProvider.BlockTagProvider{
 
     private void doors() {
         for (DyeColor colour : DyeColor.values()) {
-            this.getOrCreateTagBuilder(KTags.BlockTags.DYED_DOORS)
-                    .add(KBlocks.DYED_DOORS.get(colour).get());
+            if (colour.getId() > DyeColor.BLACK.getId()) {
+                this.getOrCreateTagBuilder(KTags.BlockTags.DYED_DOORS)
+                        .addOptional(getOpt(KBlocks.DYED_DOORS.get(colour).get()));
+            }
+            else {
+                this.getOrCreateTagBuilder(KTags.BlockTags.DYED_DOORS)
+                        .add(KBlocks.DYED_DOORS.get(colour).get());
+            }
         }
         this.getOrCreateTagBuilder(KTags.BlockTags.DYED_DOORS)
                 .add(KBlocks.BLEACHED_DOOR.get());
@@ -189,8 +288,14 @@ public class KBlockTagProvider extends FabricTagProvider.BlockTagProvider{
 
     private void trapdoors() {
         for (DyeColor colour : DyeColor.values()) {
-            this.getOrCreateTagBuilder(KTags.BlockTags.DYED_TRAPDOORS)
-                    .add(KBlocks.DYED_TRAPDOORS.get(colour).get());
+            if (colour.getId() > DyeColor.BLACK.getId()) {
+                this.getOrCreateTagBuilder(KTags.BlockTags.DYED_TRAPDOORS)
+                        .addOptional(getOpt(KBlocks.DYED_TRAPDOORS.get(colour).get()));
+            }
+            else {
+                this.getOrCreateTagBuilder(KTags.BlockTags.DYED_TRAPDOORS)
+                        .add(KBlocks.DYED_TRAPDOORS.get(colour).get());
+            }
         }
         this.getOrCreateTagBuilder(KTags.BlockTags.DYED_TRAPDOORS)
                 .add(KBlocks.BLEACHED_TRAPDOOR.get());
@@ -198,14 +303,26 @@ public class KBlockTagProvider extends FabricTagProvider.BlockTagProvider{
 
     private void walls() {
         for (DyeColor colour : DyeColor.values()) {
-            this.getOrCreateTagBuilder(BlockTags.WALLS)
-                    .add(KBlocks.DYED_ROCK_WALLS.get(colour).get())
-                    .add(KBlocks.DYED_ROCK_BRICK_WALLS.get(colour).get())
-            ;
+            if (colour.getId() > DyeColor.BLACK.getId()) {
+                this.getOrCreateTagBuilder(BlockTags.WALLS)
+                        .addOptional(getOpt(KBlocks.DYED_ROCK_WALLS.get(colour).get()))
+                        .addOptional(getOpt(KBlocks.DYED_ROCK_BRICK_WALLS.get(colour).get()))
+                ;
+            }
+            else {
+                this.getOrCreateTagBuilder(BlockTags.WALLS)
+                        .add(KBlocks.DYED_ROCK_WALLS.get(colour).get())
+                        .add(KBlocks.DYED_ROCK_BRICK_WALLS.get(colour).get())
+                ;
+            }
         }
         this.getOrCreateTagBuilder(BlockTags.WALLS)
                 .add(KBlocks.BLEACHED_ROCK_WALL.get())
                 .add(KBlocks.BLEACHED_ROCK_BRICK_WALL.get())
         ;
+    }
+
+    private ResourceLocation getOpt(Block block) {
+        return BuiltInRegistries.BLOCK.getKey(block);
     }
 }

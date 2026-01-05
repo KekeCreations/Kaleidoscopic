@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "coral_rock": {
+      "conditions": {
+        "items": [
+          {
+            "items": "kaleidoscopic:coral_rock"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "kaleidoscopic:coral_rock_stairs"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "coral_rock"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "kaleidoscopic:coral_rock_stairs"
+    ]
+  }
+}

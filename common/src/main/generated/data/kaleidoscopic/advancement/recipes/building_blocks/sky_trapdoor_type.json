@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:sky_trapdoor_type"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "sky_trapdoor": {
+      "conditions": {
+        "items": [
+          {
+            "items": "delicate_dyes:sky_dye"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "sky_trapdoor"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:sky_trapdoor_type"
+    ]
+  }
+}

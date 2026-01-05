@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "canary_trapdoor": {
+      "conditions": {
+        "items": [
+          {
+            "items": "delicate_dyes:canary_dye"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:canary_trapdoor_type"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "canary_trapdoor"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:canary_trapdoor_type"
+    ]
+  }
+}
