@@ -1,13 +1,15 @@
 {
   "required": true,
   "minVersion": "0.8",
-  "package": "com.kekecreations.kaleidoscopic.mixin",
-  "compatibilityLevel": "JAVA_21",
+  "package": "com.kekecreations.kaleidoscopic.core.mixin",
+  "compatibilityLevel": "JAVA_25",
   "mixins": [],
-  "client": [
-  ],
+  "client": [],
   "server": [],
   "injectors": {
     "defaultRequire": 1
+  },
+  "overwrites": {
+    "requireAnnotations": true
   }
 }

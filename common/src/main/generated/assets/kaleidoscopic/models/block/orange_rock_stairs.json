@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/stairs",
-  "textures": {
-    "bottom": "kaleidoscopic:block/orange_rock",
-    "side": "kaleidoscopic:block/orange_rock",
-    "top": "kaleidoscopic:block/orange_rock"
-  }
-}

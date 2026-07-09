@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/inner_stairs",
-  "textures": {
-    "bottom": "kaleidoscopic:block/sangria_rock",
-    "side": "kaleidoscopic:block/sangria_rock",
-    "top": "kaleidoscopic:block/sangria_rock"
-  }
-}

@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/slab_top",
-  "textures": {
-    "bottom": "kaleidoscopic:block/blurple_rock_bricks",
-    "side": "kaleidoscopic:block/blurple_rock_bricks",
-    "top": "kaleidoscopic:block/blurple_rock_bricks"
-  }
-}

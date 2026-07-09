@@ -1,7 +1,0 @@
-{
-  "parent": "kaleidoscopic:block/ladder_template",
-  "textures": {
-    "particle": "kaleidoscopic:block/purple_ladder",
-    "texture": "kaleidoscopic:block/purple_ladder"
-  }
-}

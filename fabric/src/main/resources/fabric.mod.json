@@ -1,27 +1,18 @@
 {
     "schemaVersion": 1,
-    "id": "kaleidoscopic",
+    "id": "${mod_id}",
     "version": "${version}",
     "name": "${mod_name}",
     "description": "${description}",
     "authors": [
         "${mod_author}"
     ],
-    "contact": {
-        "sources": "https://github.com/KekeCreations/Kaleidoscopic"
-    },
     "license": "${license}",
     "icon": "${mod_id}.png",
     "environment": "*",
     "entrypoints": {
         "main": [
-            "com.kekecreations.kaleidoscopic.FabricKaleidoscopic"
-        ],
-        "fabric-datagen": [
-            "com.kekecreations.kaleidoscopic.datagen.KDataGenerator"
-        ],
-        "client" : [
-            "com.kekecreations.kaleidoscopic.client.FabricKaleidoscopicClient"
+            "com.kekecreations.kaleidoscopic.KaleidoscopicFabric"
         ]
     },
     "mixins": [
@@ -31,11 +22,11 @@
     "depends": {
         "fabricloader": ">=${fabric_loader_version}",
         "fabric-api": "*",
-        "minecraft": "${minecraft_version}",
-        "java": ">=${java_version}",
-        "jinxedlib": ">=1.0.3"
+        "minecraft": "~${minecraft_version}",
+        "java": ">=${java_version}"
     },
     "suggests": {
+        "another-mod": "*"
     }
 }
   
