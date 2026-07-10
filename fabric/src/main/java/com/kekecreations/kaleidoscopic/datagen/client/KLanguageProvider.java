@@ -21,37 +21,37 @@ public class KLanguageProvider extends FabricLanguageProvider {
         for (DyeColor colour : DyeColor.values()) {
             String stringColour = StringUtils.capitalize(StringUtils.replace(StringUtils.replace(StringUtils.replace(colour.getName(), "blue", "Blue"), "gray", "Gray"), "_", " "));
 
-            builder.add(KBlocks.CHISELED_DYED_ROCKS.get(colour).get(), "Chiseled " + stringColour + " Rock");
-            builder.add(KBlocks.DYED_ROCKS.get(colour).get(), stringColour + " Rock");
-            builder.add(KBlocks.DYED_ROCK_STAIRS.get(colour).get(), stringColour + " Rock Stairs");
-            builder.add(KBlocks.DYED_ROCK_SLABS.get(colour).get(), stringColour + " Rock Slab");
-            builder.add(KBlocks.DYED_ROCK_WALLS.get(colour).get(), stringColour + " Rock Wall");
+            builder.add(KBlocks.CHISELED_DYED_ROCKS.get(colour).get().asItem(), "Chiseled " + stringColour + " Rock");
+            builder.add(KBlocks.DYED_ROCKS.get(colour).get().asItem(), stringColour + " Rock");
+            builder.add(KBlocks.DYED_ROCK_STAIRS.get(colour).get().asItem(), stringColour + " Rock Stairs");
+            builder.add(KBlocks.DYED_ROCK_SLABS.get(colour).get().asItem(), stringColour + " Rock Slab");
+            builder.add(KBlocks.DYED_ROCK_WALLS.get(colour).get().asItem(), stringColour + " Rock Wall");
 
-            builder.add(KBlocks.DYED_ROCK_BRICKS.get(colour).get(), stringColour + " Rock Bricks");
-            builder.add(KBlocks.DYED_ROCK_BRICK_STAIRS.get(colour).get(), stringColour + " Rock Brick Stairs");
-            builder.add(KBlocks.DYED_ROCK_BRICK_SLABS.get(colour).get(), stringColour + " Rock Brick Slab");
-            builder.add(KBlocks.DYED_ROCK_BRICK_WALLS.get(colour).get(), stringColour + " Rock Brick Wall");
+            builder.add(KBlocks.DYED_ROCK_BRICKS.get(colour).get().asItem(), stringColour + " Rock Bricks");
+            builder.add(KBlocks.DYED_ROCK_BRICK_STAIRS.get(colour).get().asItem(), stringColour + " Rock Brick Stairs");
+            builder.add(KBlocks.DYED_ROCK_BRICK_SLABS.get(colour).get().asItem(), stringColour + " Rock Brick Slab");
+            builder.add(KBlocks.DYED_ROCK_BRICK_WALLS.get(colour).get().asItem(), stringColour + " Rock Brick Wall");
 
-            builder.add(KBlocks.DYED_LADDERS.get(colour).get(), stringColour + " Ladder");
-            builder.add(KBlocks.DYED_DOORS.get(colour).get(), stringColour + " Door");
-            builder.add(KBlocks.DYED_TRAPDOORS.get(colour).get(), stringColour + " Trapdoor");
+            builder.add(KBlocks.DYED_LADDERS.get(colour).get().asItem(), stringColour + " Ladder");
+            builder.add(KBlocks.DYED_DOORS.get(colour).get().asItem(), stringColour + " Door");
+            builder.add(KBlocks.DYED_TRAPDOORS.get(colour).get().asItem(), stringColour + " Trapdoor");
 
-            builder.add(KBlocks.DYED_LAMPS.get(colour).get(), stringColour + " Lamp");
+            builder.add(KBlocks.DYED_LAMPS.get(colour).get().asItem(), stringColour + " Lamp");
         }
 
-        builder.add(KBlocks.CHISELED_BLEACHED_ROCK.get(), "Chiseled Bleached Rock");
-        builder.add(KBlocks.BLEACHED_ROCK.get(), "Bleached Rock");
-        builder.add(KBlocks.BLEACHED_ROCK_STAIRS.get(), "Bleached Rock Stairs");
-        builder.add(KBlocks.BLEACHED_ROCK_SLAB.get(), "Bleached Rock Slab");
-        builder.add(KBlocks.BLEACHED_ROCK_WALL.get(), "Bleached Rock Wall");
-        builder.add(KBlocks.BLEACHED_ROCK_BRICKS.get(), "Bleached Rock Bricks");
-        builder.add(KBlocks.BLEACHED_ROCK_BRICK_STAIRS.get(), "Bleached Rock Brick Stairs");
-        builder.add(KBlocks.BLEACHED_ROCK_BRICK_SLAB.get(), "Bleached Rock Brick Slab");
-        builder.add(KBlocks.BLEACHED_ROCK_BRICK_WALL.get(), "Bleached Rock Brick Wall");
-        builder.add(KBlocks.BLEACHED_LADDER.get(), "Bleached Ladder");
-        builder.add(KBlocks.BLEACHED_DOOR.get(), "Bleached Door");
-        builder.add(KBlocks.BLEACHED_TRAPDOOR.get(), "Bleached Trapdoor");
-        builder.add(KBlocks.BLEACHED_LAMP.get(), "Bleached Lamp");
+        builder.add(KBlocks.CHISELED_BLEACHED_ROCK.get().asItem(), "Chiseled Bleached Rock");
+        builder.add(KBlocks.BLEACHED_ROCK.get().asItem(), "Bleached Rock");
+        builder.add(KBlocks.BLEACHED_ROCK_STAIRS.get().asItem(), "Bleached Rock Stairs");
+        builder.add(KBlocks.BLEACHED_ROCK_SLAB.get().asItem(), "Bleached Rock Slab");
+        builder.add(KBlocks.BLEACHED_ROCK_WALL.get().asItem(), "Bleached Rock Wall");
+        builder.add(KBlocks.BLEACHED_ROCK_BRICKS.get().asItem(), "Bleached Rock Bricks");
+        builder.add(KBlocks.BLEACHED_ROCK_BRICK_STAIRS.get().asItem(), "Bleached Rock Brick Stairs");
+        builder.add(KBlocks.BLEACHED_ROCK_BRICK_SLAB.get().asItem(), "Bleached Rock Brick Slab");
+        builder.add(KBlocks.BLEACHED_ROCK_BRICK_WALL.get().asItem(), "Bleached Rock Brick Wall");
+        builder.add(KBlocks.BLEACHED_LADDER.get().asItem(), "Bleached Ladder");
+        builder.add(KBlocks.BLEACHED_DOOR.get().asItem(), "Bleached Door");
+        builder.add(KBlocks.BLEACHED_TRAPDOOR.get().asItem(), "Bleached Trapdoor");
+        builder.add(KBlocks.BLEACHED_LAMP.get().asItem(), "Bleached Lamp");
 
         builder.add("tab.kaleidoscopic.configurable_tab", "Kaleidoscopic");
         builder.add("tab.kaleidoscopic.compat_tab", "Kaleidoscopic x Delicate Dyes");
