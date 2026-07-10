@@ -13,7 +13,6 @@ import net.minecraft.client.data.models.blockstates.PropertyDispatch;
 import net.minecraft.client.data.models.model.ModelLocationUtils;
 import net.minecraft.client.data.models.model.ModelTemplates;
 import net.minecraft.client.data.models.model.TextureMapping;
-import net.minecraft.client.data.models.model.TexturedModel;
 import net.minecraft.client.renderer.block.dispatch.Variant;
 import net.minecraft.client.renderer.block.dispatch.VariantMutator;
 import net.minecraft.core.Direction;
@@ -21,7 +20,6 @@ import net.minecraft.resources.Identifier;
 import net.minecraft.util.random.WeightedList;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 
 public class KModelProvider extends FabricModelProvider {
@@ -52,7 +50,6 @@ public class KModelProvider extends FabricModelProvider {
             rockBrickBlock.wall(KBlocks.DYED_ROCK_BRICK_WALLS.get(colour).get());
 
             createDyedLadder(KBlocks.DYED_LADDERS.get(colour).get(), generator);
-            generator.registerSimpleFlatItemModel(KBlocks.DYED_LADDERS.get(colour).get().asItem());
             generator.createDoor(KBlocks.DYED_DOORS.get(colour).get());
             generator.createOrientableTrapdoor(KBlocks.DYED_TRAPDOORS.get(colour).get());
 
@@ -72,14 +69,17 @@ public class KModelProvider extends FabricModelProvider {
         rockBlock2.wall(KBlocks.BLEACHED_ROCK_BRICK_WALL.get());
 
         createDyedLadder(KBlocks.BLEACHED_LADDER.get(), generator);
-        generator.registerSimpleFlatItemModel(KBlocks.BLEACHED_LADDER.get().asItem());
         generator.createDoor(KBlocks.BLEACHED_DOOR.get());
         generator.createOrientableTrapdoor(KBlocks.BLEACHED_TRAPDOOR.get());
         createRedstoneLamp(KBlocks.BLEACHED_LAMP.get(), generator);
     }
 
     @Override
-    public void generateItemModels(ItemModelGenerators itemModelGenerators) {
+    public void generateItemModels(ItemModelGenerators generator) {
+        for (DyeColor colour : DyeColor.values()) {
+            generator.generateFlatItem(KBlocks.DYED_LADDERS.get(colour).get().asItem(), ModelTemplates.FLAT_ITEM);
+        }
+        generator.generateFlatItem(KBlocks.BLEACHED_LADDER.get().asItem(), ModelTemplates.FLAT_ITEM);
     }
 
     public static Variant plainModel(final Identifier model) {
@@ -96,7 +96,6 @@ public class KModelProvider extends FabricModelProvider {
 
     public final void createDyedLadder(Block ladderBlock, BlockModelGenerators generator) {
         Identifier model = KModelTemplate.LADDER.create(ladderBlock, KTextureMapping.ladderTextureMappings(ladderBlock), generator.modelOutput);
-        //generator.blockStateOutput.accept(MultiVariantGenerator.dispatch(ladderBlock, MultiVariant.with(VariantProperties.MODEL, model)).with(BlockModelGenerators.createHorizontalFacingDispatch()));
         generator.blockStateOutput.accept(MultiVariantGenerator.dispatch(ladderBlock, plainVariant(ModelLocationUtils.getModelLocation(ladderBlock))).with(ROTATION_HORIZONTAL_FACING));
     }
 
@@ -105,6 +104,10 @@ public class KModelProvider extends FabricModelProvider {
         MultiVariant off = plainVariant(generator.createSuffixedVariant(lamp, "_off", ModelTemplates.CUBE_ALL, TextureMapping::cube));
         MultiVariant on = plainVariant(generator.createSuffixedVariant(lamp, "_on", ModelTemplates.CUBE_ALL, TextureMapping::cube));
         generator.blockStateOutput.accept(MultiVariantGenerator.dispatch(lamp).with(generator.createBooleanModelDispatch(BlockStateProperties.LIT, on, off)));
-        //generator.delegateItemModel(lamp, resourceLocation);
+
+
+        //Item model
+        Identifier inventory = ModelLocationUtils.getModelLocation(lamp, "_off");
+        generator.registerSimpleItemModel(lamp, inventory);
     }
 }

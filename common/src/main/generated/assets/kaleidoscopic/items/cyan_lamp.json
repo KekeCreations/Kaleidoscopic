@@ -1,6 +1,6 @@
 {
   "model": {
     "type": "minecraft:model",
-    "model": "kaleidoscopic:block/cyan_lamp"
+    "model": "kaleidoscopic:block/cyan_lamp_off"
   }
 }
