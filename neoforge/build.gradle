@@ -61,5 +61,5 @@ sourceSets.configureEach {
 }
 
 dependencies {
-    implementation "curse.maven:jinxedlib-1203401:8400431"
+    implementation "curse.maven:jinxedlib-1203401:8405540"
 }

@@ -1,0 +1,22 @@
+{
+  "blocks": "#kaleidoscopic:dyed_trapdoors",
+  "mappings": {
+    "arts_and_crafts:white_paintbrush": "kaleidoscopic:white_trapdoor",
+    "arts_and_crafts:light_gray_paintbrush": "kaleidoscopic:light_gray_trapdoor",
+    "arts_and_crafts:gray_paintbrush": "kaleidoscopic:gray_trapdoor",
+    "arts_and_crafts:black_paintbrush": "kaleidoscopic:black_trapdoor",
+    "arts_and_crafts:brown_paintbrush": "kaleidoscopic:brown_trapdoor",
+    "arts_and_crafts:red_paintbrush": "kaleidoscopic:red_trapdoor",
+    "arts_and_crafts:orange_paintbrush": "kaleidoscopic:orange_trapdoor",
+    "arts_and_crafts:yellow_paintbrush": "kaleidoscopic:yellow_trapdoor",
+    "arts_and_crafts:lime_paintbrush": "kaleidoscopic:lime_trapdoor",
+    "arts_and_crafts:green_paintbrush": "kaleidoscopic:green_trapdoor",
+    "arts_and_crafts:cyan_paintbrush": "kaleidoscopic:cyan_trapdoor",
+    "arts_and_crafts:light_blue_paintbrush": "kaleidoscopic:light_blue_trapdoor",
+    "arts_and_crafts:blue_paintbrush": "kaleidoscopic:blue_trapdoor",
+    "arts_and_crafts:purple_paintbrush": "kaleidoscopic:purple_trapdoor",
+    "arts_and_crafts:magenta_paintbrush": "kaleidoscopic:magenta_trapdoor",
+    "arts_and_crafts:pink_paintbrush": "kaleidoscopic:pink_trapdoor",
+    "arts_and_crafts:bleachdew_paintbrush": "kaleidoscopic:bleached_trapdoor"
+  }
+}

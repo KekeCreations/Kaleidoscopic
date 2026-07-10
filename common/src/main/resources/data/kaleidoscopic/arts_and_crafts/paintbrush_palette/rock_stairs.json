@@ -1,0 +1,22 @@
+{
+  "blocks": "#kaleidoscopic:rock_stairs",
+  "mappings": {
+    "arts_and_crafts:white_paintbrush": "kaleidoscopic:white_rock_stairs",
+    "arts_and_crafts:light_gray_paintbrush": "kaleidoscopic:light_gray_rock_stairs",
+    "arts_and_crafts:gray_paintbrush": "kaleidoscopic:gray_rock_stairs",
+    "arts_and_crafts:black_paintbrush": "kaleidoscopic:black_rock_stairs",
+    "arts_and_crafts:brown_paintbrush": "kaleidoscopic:brown_rock_stairs",
+    "arts_and_crafts:red_paintbrush": "kaleidoscopic:red_rock_stairs",
+    "arts_and_crafts:orange_paintbrush": "kaleidoscopic:orange_rock_stairs",
+    "arts_and_crafts:yellow_paintbrush": "kaleidoscopic:yellow_rock_stairs",
+    "arts_and_crafts:lime_paintbrush": "kaleidoscopic:lime_rock_stairs",
+    "arts_and_crafts:green_paintbrush": "kaleidoscopic:green_rock_stairs",
+    "arts_and_crafts:cyan_paintbrush": "kaleidoscopic:cyan_rock_stairs",
+    "arts_and_crafts:light_blue_paintbrush": "kaleidoscopic:light_blue_rock_stairs",
+    "arts_and_crafts:blue_paintbrush": "kaleidoscopic:blue_rock_stairs",
+    "arts_and_crafts:purple_paintbrush": "kaleidoscopic:purple_rock_stairs",
+    "arts_and_crafts:magenta_paintbrush": "kaleidoscopic:magenta_rock_stairs",
+    "arts_and_crafts:pink_paintbrush": "kaleidoscopic:pink_rock_stairs",
+    "arts_and_crafts:bleachdew_paintbrush": "kaleidoscopic:bleached_rock_stairs"
+  }
+}

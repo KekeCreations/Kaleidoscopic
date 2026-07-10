@@ -1,0 +1,22 @@
+{
+  "blocks": "#kaleidoscopic:dyed_doors",
+  "mappings": {
+    "arts_and_crafts:white_paintbrush": "kaleidoscopic:white_door",
+    "arts_and_crafts:light_gray_paintbrush": "kaleidoscopic:light_gray_door",
+    "arts_and_crafts:gray_paintbrush": "kaleidoscopic:gray_door",
+    "arts_and_crafts:black_paintbrush": "kaleidoscopic:black_door",
+    "arts_and_crafts:brown_paintbrush": "kaleidoscopic:brown_door",
+    "arts_and_crafts:red_paintbrush": "kaleidoscopic:red_door",
+    "arts_and_crafts:orange_paintbrush": "kaleidoscopic:orange_door",
+    "arts_and_crafts:yellow_paintbrush": "kaleidoscopic:yellow_door",
+    "arts_and_crafts:lime_paintbrush": "kaleidoscopic:lime_door",
+    "arts_and_crafts:green_paintbrush": "kaleidoscopic:green_door",
+    "arts_and_crafts:cyan_paintbrush": "kaleidoscopic:cyan_door",
+    "arts_and_crafts:light_blue_paintbrush": "kaleidoscopic:light_blue_door",
+    "arts_and_crafts:blue_paintbrush": "kaleidoscopic:blue_door",
+    "arts_and_crafts:purple_paintbrush": "kaleidoscopic:purple_door",
+    "arts_and_crafts:magenta_paintbrush": "kaleidoscopic:magenta_door",
+    "arts_and_crafts:pink_paintbrush": "kaleidoscopic:pink_door",
+    "arts_and_crafts:bleachdew_paintbrush": "kaleidoscopic:bleached_door"
+  }
+}

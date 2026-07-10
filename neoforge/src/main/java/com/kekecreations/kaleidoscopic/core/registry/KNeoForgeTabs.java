@@ -101,5 +101,6 @@ public class KNeoForgeTabs {
         return JinxedRegistryHelper.register(BuiltInRegistries.CREATIVE_MODE_TAB, Kaleidoscopic.MOD_ID, name, supplier);
     }
 
-    public static void register() {}
+    public static void register() {
+    }
 }

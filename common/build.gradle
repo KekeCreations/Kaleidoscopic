@@ -21,7 +21,7 @@ dependencies {
     // Fabric and NeoForge both bundle MixinExtras, so it is safe to use it in common
     compileOnly(annotationProcessor('io.github.llamalad7:mixinextras-common:0.5.3'))
 
-    compileOnly "curse.maven:jinxedlib-1203401:8400431"
+    compileOnly "curse.maven:jinxedlib-1203401:8405540"
 
 }
 

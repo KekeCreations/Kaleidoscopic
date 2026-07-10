@@ -13,8 +13,7 @@ public class KaleidoscopicNeoForge {
 
     public KaleidoscopicNeoForge(IEventBus eventBus, ModContainer modContainer) {
         modContainer.registerConfig(ModConfig.Type.COMMON, NeoForgeConfig.SPEC);
-        Kaleidoscopic.init();
         KNeoForgeTabs.register();
-
+        Kaleidoscopic.init();
     }
 }
