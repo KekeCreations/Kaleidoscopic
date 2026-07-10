@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "kaleidoscopic:block/gray_ladder",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "kaleidoscopic:block/gray_ladder"
+    },
+    "facing=south": {
+      "model": "kaleidoscopic:block/gray_ladder",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "kaleidoscopic:block/gray_ladder",
+      "y": 270
+    }
+  }
+}

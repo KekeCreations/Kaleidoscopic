@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/wall_inventory",
+  "textures": {
+    "wall": "kaleidoscopic:block/black_rock_bricks"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "bottom": "kaleidoscopic:block/cyan_rock_bricks",
+    "side": "kaleidoscopic:block/cyan_rock_bricks",
+    "top": "kaleidoscopic:block/cyan_rock_bricks"
+  }
+}

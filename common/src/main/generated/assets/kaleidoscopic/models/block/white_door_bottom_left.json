@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/door_bottom_left",
+  "textures": {
+    "bottom": "kaleidoscopic:block/white_door_bottom",
+    "top": "kaleidoscopic:block/white_door_top"
+  }
+}

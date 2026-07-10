@@ -81,3 +81,10 @@ publishing {
         }
     }
 }
+
+repositories {
+    mavenCentral()
+    maven {
+        url "https://cursemaven.com"
+    }
+}

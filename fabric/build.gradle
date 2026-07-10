@@ -6,6 +6,9 @@ dependencies {
     minecraft("com.mojang:minecraft:${minecraft_version}")
     implementation("net.fabricmc:fabric-loader:${fabric_loader_version}")
     implementation("net.fabricmc.fabric-api:fabric-api:${fabric_version}")
+
+    implementation "curse.maven:jinxedlib-1203401:8400425"
+    include implementation("blue.endless:jankson:${jankson_version}")
 }
 
 loom {
@@ -25,6 +28,15 @@ loom {
             setConfigName('Fabric Server')
             ideConfigGenerated(true)
             runDir('runs/server')
+        }
+        datagen {
+            inherit client
+            name "Data Generation"
+            vmArg "-Dfabric-api.datagen"
+            vmArg "-Dfabric-api.datagen.output-dir=${file("../common/src/main/generated/")}"
+            vmArg "-Dfabric-api.datagen.modid=kaleidoscopic"
+
+            runDir "build/datagen"
         }
     }
 }
@@ -47,3 +59,5 @@ sourceSets.configureEach {
         }
     }
 }
+
+sourceSets.main.resources { srcDir project(":common").file('src/main/generated/').getAbsolutePath() }

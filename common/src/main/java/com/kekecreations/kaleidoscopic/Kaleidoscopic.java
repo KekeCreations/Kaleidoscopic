@@ -1,5 +1,7 @@
 package com.kekecreations.kaleidoscopic;
 
+import com.kekecreations.kaleidoscopic.core.registry.KBlocks;
+import net.minecraft.resources.Identifier;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -12,5 +14,10 @@ public class Kaleidoscopic {
 
 
     public static void init() {
+        KBlocks.register();
+    }
+
+    public static Identifier id(String name) {
+        return Identifier.fromNamespaceAndPath(MOD_ID, name);
     }
 }

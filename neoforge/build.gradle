@@ -39,7 +39,7 @@ neoForge {
     }
 }
 
-sourceSets.main.resources { srcDir 'src/generated/resources' }
+sourceSets.main.resources { srcDir project(":common").file('src/main/generated/').getAbsolutePath() }
 
 // Implement mcgradleconventions loader attribute
 def loaderAttribute = Attribute.of('io.github.mcgradleconventions.loader', String)
@@ -58,4 +58,8 @@ sourceSets.configureEach {
             }
         }
     }
+}
+
+dependencies {
+    implementation "curse.maven:jinxedlib-1203401:8400431"
 }
