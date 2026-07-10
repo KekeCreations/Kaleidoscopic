@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "K": "kaleidoscopic:black_rock"
+  },
+  "pattern": [
+    "K  ",
+    "KK ",
+    "KKK"
+  ],
+  "result": {
+    "count": 4,
+    "id": "kaleidoscopic:black_rock_stairs"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": "kaleidoscopic:purple_rock",
+  "result": {
+    "id": "kaleidoscopic:purple_rock_stairs"
+  }
+}

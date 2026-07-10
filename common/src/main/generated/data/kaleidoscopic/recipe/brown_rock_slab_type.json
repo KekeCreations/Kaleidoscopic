@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "K": "#kaleidoscopic:can_craft_rock_slab",
+    "X": "minecraft:brown_dye"
+  },
+  "pattern": [
+    "KKK",
+    "KXK",
+    "KKK"
+  ],
+  "result": {
+    "count": 8,
+    "id": "kaleidoscopic:brown_rock_slab"
+  }
+}

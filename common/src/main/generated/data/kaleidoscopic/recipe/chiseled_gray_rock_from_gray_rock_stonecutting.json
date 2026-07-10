@@ -1,0 +1,7 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": "kaleidoscopic:gray_rock",
+  "result": {
+    "id": "kaleidoscopic:chiseled_gray_rock"
+  }
+}

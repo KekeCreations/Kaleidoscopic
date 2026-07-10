@@ -1,0 +1,7 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": "kaleidoscopic:black_rock",
+  "result": {
+    "id": "kaleidoscopic:chiseled_black_rock"
+  }
+}

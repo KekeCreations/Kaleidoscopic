@@ -1,0 +1,7 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": "kaleidoscopic:light_gray_rock_bricks",
+  "result": {
+    "id": "kaleidoscopic:light_gray_rock_brick_wall"
+  }
+}

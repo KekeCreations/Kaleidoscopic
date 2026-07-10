@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "K": "kaleidoscopic:lime_rock_slab"
+  },
+  "pattern": [
+    "K",
+    "K"
+  ],
+  "result": {
+    "id": "kaleidoscopic:chiseled_lime_rock"
+  }
+}

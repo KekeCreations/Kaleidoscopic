@@ -1,0 +1,7 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": "kaleidoscopic:lime_rock_bricks",
+  "result": {
+    "id": "kaleidoscopic:lime_rock_brick_stairs"
+  }
+}

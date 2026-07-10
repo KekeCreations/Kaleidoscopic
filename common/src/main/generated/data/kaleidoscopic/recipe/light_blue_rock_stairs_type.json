@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "K": "#kaleidoscopic:can_craft_rock_stairs",
+    "X": "minecraft:light_blue_dye"
+  },
+  "pattern": [
+    "KKK",
+    "KXK",
+    "KKK"
+  ],
+  "result": {
+    "count": 8,
+    "id": "kaleidoscopic:light_blue_rock_stairs"
+  }
+}

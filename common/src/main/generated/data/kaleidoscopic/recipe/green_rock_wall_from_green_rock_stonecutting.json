@@ -1,0 +1,7 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": "kaleidoscopic:green_rock",
+  "result": {
+    "id": "kaleidoscopic:green_rock_wall"
+  }
+}

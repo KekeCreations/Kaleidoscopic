@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "K": "kaleidoscopic:blue_rock_slab"
+  },
+  "pattern": [
+    "K",
+    "K"
+  ],
+  "result": {
+    "id": "kaleidoscopic:chiseled_blue_rock"
+  }
+}

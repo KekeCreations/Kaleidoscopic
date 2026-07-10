@@ -1,0 +1,7 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": "kaleidoscopic:black_rock_bricks",
+  "result": {
+    "id": "kaleidoscopic:black_rock_brick_stairs"
+  }
+}

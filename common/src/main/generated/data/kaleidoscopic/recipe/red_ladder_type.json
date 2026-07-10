@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "K": "minecraft:ladder",
+    "X": "minecraft:red_dye"
+  },
+  "pattern": [
+    "KKK",
+    "KXK",
+    "KKK"
+  ],
+  "result": {
+    "count": 8,
+    "id": "kaleidoscopic:red_ladder"
+  }
+}

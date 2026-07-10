@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "kaleidoscopic:pink_ladder_type"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "pink_ladder": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:pink_dye"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "pink_ladder"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "kaleidoscopic:pink_ladder_type"
+    ]
+  }
+}

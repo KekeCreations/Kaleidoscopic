@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "K": "kaleidoscopic:black_rock"
+  },
+  "pattern": [
+    "KKK",
+    "KKK"
+  ],
+  "result": {
+    "count": 6,
+    "id": "kaleidoscopic:black_rock_wall"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "blue_rock": {
+      "conditions": {
+        "items": [
+          {
+            "items": "kaleidoscopic:blue_rock"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "kaleidoscopic:blue_rock_slab"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "blue_rock"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "kaleidoscopic:blue_rock_slab"
+    ]
+  }
+}

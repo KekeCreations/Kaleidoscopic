@@ -1,0 +1,7 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": "kaleidoscopic:red_rock",
+  "result": {
+    "id": "kaleidoscopic:chiseled_red_rock"
+  }
+}
